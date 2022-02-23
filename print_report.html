@@ -3,9 +3,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
-    <title>¸ÅÃâ / ¸ÅÀÔ º¸°í¼­</title>
+    <title>ï¿½ï¿½ï¿½ï¿½ / ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</title>
     <link rel="stylesheet" href="/js/jquery-ui.min.css" type="text/css" />
-    <link rel="stylesheet" href="/Css/A_common.css" type="text/css" />
+    <link rel="stylesheet" href="./Css/A_common.css" type="text/css" />
     <script type="text/javascript" src="/js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="/js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="/js/jq-yd-common.js"></script>
@@ -28,8 +28,8 @@
                     sngSellPriceSum += sngTmp;
                     $(this).val(sngTmp);
                     $(this).siblings("span").text(putComma(sngTmp + ""));
-                    /*¿ø°¡À²*/
-                    //   if( sngTmp_sell_won_total > sngTmp){ //°ªÀÌ ¸ÂÁö¾ÊÀ»°æ¿ì Á¦¿Ü
+                    /*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
+                    //   if( sngTmp_sell_won_total > sngTmp){ //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
                     var w_rate = ((sngTmp / sngTmp_sell_won_total) * 100).toString();
                     w_rate = Number(w_rate);
                     w_rate = w_rate.toFixed(2);
@@ -43,7 +43,7 @@
             });
 
 
-            /*ÆÄÆ®³Ê ¼ö¼ö·á*/
+            /*ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
             if (frm.find("input[name='amount_psr']").length > 0) {
                 var amount_psr = parseFloat(frm.find("input[name='amount_psr']").val().replace(/,/g, ""));
                 var count_psr = parseFloat(frm.find("input[name='count_psr']").val().replace(/,/g, ""));
@@ -56,25 +56,25 @@
                 frm.find("input[name='amount_contract']").siblings("span").text(putComma((amount_contract * count_contract) + ""));
                 frm.find("input[name='amount_psr2']").siblings("span").text(putComma((amount_psr2 * count_psr2) + ""));
 
-                sngSellPriceSum += amount_psr + amount_contract + amount_psr2;  // ÆÇ¸Å±Ý¾× °ø±Þ°¡¾×
+                sngSellPriceSum += amount_psr + amount_contract + amount_psr2;  // ï¿½Ç¸Å±Ý¾ï¿½ ï¿½ï¿½ï¿½Þ°ï¿½ï¿½ï¿½
 
             }
 
 
-            ele = $("#prd_list_in_sum_sell_price"); // ÆÇ¸Å±Ý¾× °ø±Þ°¡¾×
+            ele = $("#prd_list_in_sum_sell_price"); // ï¿½Ç¸Å±Ý¾ï¿½ ï¿½ï¿½ï¿½Þ°ï¿½ï¿½ï¿½
             if (ele.length > 0) {
                 ele.html(putComma(Math.floor(sngSellPriceSum) + ""));
             }
 
-            ele = $("#prd_list_in_sum_cost_price"); // ¿ø°¡ °ø±Þ°¡¾×
+            ele = $("#prd_list_in_sum_cost_price"); // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Þ°ï¿½ï¿½ï¿½
             if (ele.length > 0) {
                 ele.html(putComma(Math.floor(sngCostPriceSum) + ""));
             }
 
-            ele = $("#prd_list_in_sum_sell_price_vat"); // ÆÇ¸Å±Ý¾× VAT
+            ele = $("#prd_list_in_sum_sell_price_vat"); // ï¿½Ç¸Å±Ý¾ï¿½ VAT
 
             if (ele.length > 0) {
-                // ¸ÅÃâ¹ßÁÖ¼­ 5247 ¹øÀÏ¶§¿£ ºÎ°¡°¡Ä¡¼¼(285985)¸¦ ÀÓÀÇÀû¿ëÇÔ. ³ª¸ÓÁö´Â Á¤»óÀûÀ¸·Î Ã³¸®ÇÔ
+                // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ 5247 ï¿½ï¿½ï¿½Ï¶ï¿½ï¿½ï¿½ ï¿½Î°ï¿½ï¿½ï¿½Ä¡ï¿½ï¿½(285985)ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½ï¿½ï¿½
                 if (frm.find("input[name='ys_code']").val() == "5247") {
                     ele.html(putComma(285985 + ""));
                 } else {
@@ -83,46 +83,46 @@
             }
 
             if (ele.length > 0) {
-                // ¸ÅÃâ¹ßÁÖ¼­ 5247 ¹øÀÏ¶§¿£ ºÎ°¡°¡Ä¡¼¼(285985)¸¦ ÀÓÀÇÀû¿ëÇÔ. ³ª¸ÓÁö´Â Á¤»óÀûÀ¸·Î Ã³¸®ÇÔ
+                // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ 5247 ï¿½ï¿½ï¿½Ï¶ï¿½ï¿½ï¿½ ï¿½Î°ï¿½ï¿½ï¿½Ä¡ï¿½ï¿½(285985)ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½ï¿½ï¿½
                 if (frm.find("input[name='ys_code']").val() == "5247") {
                     ele.html(putComma(285985 + ""));
                 } else {
                     ele.html(putComma(Math.floor(sngSellPriceSum * 0.1) + ""));
                 }
             }
-            ele = $("#prd_list_in_sum_cost_price_vat"); // ¿ø°¡ VAT
+            ele = $("#prd_list_in_sum_cost_price_vat"); // ï¿½ï¿½ï¿½ï¿½ VAT
             if (ele.length > 0) {
                 ele.html(putComma(Math.floor(sngCostPriceSum * 0.1) + ""));
             }
 
 
-            ele = $("#prd_list_in_sum_sell_price_add_vat"); // ÆÇ¸Å±Ý¾× VATÆ÷ÇÔ±Ý¾×
+            ele = $("#prd_list_in_sum_sell_price_add_vat"); // ï¿½Ç¸Å±Ý¾ï¿½ VATï¿½ï¿½ï¿½Ô±Ý¾ï¿½
             if (ele.length > 0) {
                 ele.html(putComma(Math.floor(sngSellPriceSum * 1.1) + ""));
             }
 
-            ele = $("#prd_list_in_sum_cost_price_add_vat"); // ¿ø°¡ VATÆ÷ÇÔ±Ý¾×
+            ele = $("#prd_list_in_sum_cost_price_add_vat"); // ï¿½ï¿½ï¿½ï¿½ VATï¿½ï¿½ï¿½Ô±Ý¾ï¿½
             if (ele.length > 0) {
                 ele.html(putComma(Math.floor(sngCostPriceSum * 1.1) + ""));
             }
-            /*¿ø°¡À²*/
-            var prd_list_sum_sell_price = $("#prd_list_sum_sell_price").html();  //ÆÇ¸Å°¡
+            /*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
+            var prd_list_sum_sell_price = $("#prd_list_sum_sell_price").html();  //ï¿½Ç¸Å°ï¿½
             prd_list_sum_sell_price = parseInt(prd_list_sum_sell_price.replace(/,/g, ""));
 
-            var prd_list_in_sum_cost_price_vat = $("#prd_list_in_sum_sell_price").html(); //¿ø°¡
+            var prd_list_in_sum_cost_price_vat = $("#prd_list_in_sum_sell_price").html(); //ï¿½ï¿½ï¿½ï¿½
             prd_list_in_sum_cost_price_vat = parseInt(prd_list_in_sum_cost_price_vat.replace(/,/g, ""));
 
-            //     if( prd_list_sum_sell_price > prd_list_in_sum_cost_price_vat){ //°ªÀÌ ¸ÂÁö¾ÊÀ»°æ¿ì Á¦¿Ü
+            //     if( prd_list_sum_sell_price > prd_list_in_sum_cost_price_vat){ //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
             var won_tot_rate = ((prd_list_in_sum_cost_price_vat / prd_list_sum_sell_price) * 100).toString();
 
             won_tot_rate = Number(won_tot_rate);
             won_tot_rate = won_tot_rate.toFixed(1);
-            $("#prd_list_tot_won_percent").html(won_tot_rate); //¿ø°¡À²
+            $("#prd_list_tot_won_percent").html(won_tot_rate); //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
             // }
             var prd_list_tot_won_margin = putComma(Math.floor(prd_list_sum_sell_price - prd_list_in_sum_cost_price_vat) + "");
 
-            $("#prd_list_tot_won_margin").html(prd_list_tot_won_margin); //¸¶Áø
+            $("#prd_list_tot_won_margin").html(prd_list_tot_won_margin); //ï¿½ï¿½ï¿½ï¿½
 
 
         }
@@ -130,9 +130,9 @@
         $(function () {
             $(document).focus();
 
-            // ¸ÅÃâÁ¦Ç° ÇÕ°è °è»ê
+            // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç° ï¿½Õ°ï¿½ ï¿½ï¿½ï¿½
             computeNSaleDetailPrdListSum();
-            // ¸ÅÀÔÁ¦Ç° ÇÕ°è °è»ê
+            // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç° ï¿½Õ°ï¿½ ï¿½ï¿½ï¿½
             computeNPurchaseDetailPrdListSum();
 
             $("#prd_list_sum_sell_price_tot").html($("#prd_list_sum_sell_price").html());
@@ -149,9 +149,9 @@
 </head>
 <body>
     <div class="prn_wrap">
-        <div style="text-align:center; font-size:20px; font-weight:bold;">¸ÅÃâ/¸ÅÀÔ º¸°í¼­</div>
+        <div style="text-align:center; font-size:20px; font-weight:bold;">ï¿½ï¿½ï¿½ï¿½/ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</div>
         <span>
-            <h4>ÀÏ¹Ý»çÇ×</h4>
+            <h4>ï¿½Ï¹Ý»ï¿½ï¿½ï¿½</h4>
             <table class="print mb10">
                 <colgroup>
                     <col width="100" />
@@ -161,27 +161,27 @@
                 </colgroup>
                 <tbody>
                     <tr>
-                        <th class="ac">½ÂÀÎ¹øÈ£</th>
+                        <th class="ac">ï¿½ï¿½ï¿½Î¹ï¿½È£</th>
                         <td class="ac">160523003</td>
-                        <th class="ac">¼öÁÖ±¸ºÐ</th>
-                        <td class="ac">¼öÀÇ / »óÇ°</td>
+                        <th class="ac">ï¿½ï¿½ï¿½Ö±ï¿½ï¿½ï¿½</th>
+                        <td class="ac">ï¿½ï¿½ï¿½ï¿½ / ï¿½ï¿½Ç°</td>
                     </tr>
                     <tr>
-                        <th class="ac">½ÂÀÎ¿äÃ»ÀÏ </th>
+                        <th class="ac">ï¿½ï¿½ï¿½Î¿ï¿½Ã»ï¿½ï¿½ </th>
                         <td class="ac">2016-05-21</td>
-                        <th class="ac">ÃÑ °è¾à±Ý¾×</th>
-                        <td class="ac">1,700,000 (Vat º°µµ)</td>
+                        <th class="ac">ï¿½ï¿½ ï¿½ï¿½ï¿½Ý¾ï¿½</th>
+                        <td class="ac">1,700,000 (Vat ï¿½ï¿½ï¿½ï¿½)</td>
                     </tr>
                     <tr>
-                        <th class="ac">¿µ¾÷´ã´çÀÚ</th>
-                        <td class="ac">¼ÒÇÁÆ®¿þ¾î»ç¾÷ºÎ / ÀüÁ¾ÈÖ</td>
-                        <th class="ac">°áÀçÁ¶°Ç</th>
-                        <td class="ac">±âÅ¸ / 30ÀÏ</td>
+                        <th class="ac">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</th>
+                        <td class="ac">ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ / ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</td>
+                        <th class="ac">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</th>
+                        <td class="ac">ï¿½ï¿½Å¸ / 30ï¿½ï¿½</td>
                     </tr>
                     <tr>
-                        <th class="ac">°è»ê¼­ ¹ßÇàÀÏ</th>
+                        <th class="ac">ï¿½ï¿½ê¼­ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</th>
                         <td class="ac">2016-06-01</td>
-                        <th class="ac">¼ö±Ý¿¹Á¤ÀÏ</th>
+                        <th class="ac">ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½ï¿½ï¿½ï¿½</th>
                         <td class="ac">2016-06-31</td>
                     </tr>
                 </tbody>
@@ -197,23 +197,23 @@
                 </colgroup>
                 <tbody>
                     <tr>
-                        <th colspan="6" scope="row">ÆÄÆ®³Ê Á¤º¸</th>
+                        <th colspan="6" scope="row">ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½</th>
                     </tr>
                     <tr>
-                        <th class="ac">ÆÄÆ®³Ê¸í</th>
+                        <th class="ac">ï¿½ï¿½Æ®ï¿½Ê¸ï¿½</th>
                         <td class="ac">
-                            ÇØ¼Öµ¥ÀÌÅ¸[¼±ÀÔ±Ý]
-                            <!-- [¼±ÀÔ±Ý] ÆÄÆ®³ÊÁ¤º¸¿¡ ¼³Á¤µÇ¾î ÀÖ´Â ±âº» °áÀç Á¶°Ç -->
+                            ï¿½Ø¼Öµï¿½ï¿½ï¿½Å¸[ï¿½ï¿½ï¿½Ô±ï¿½]
+                            <!-- [ï¿½ï¿½ï¿½Ô±ï¿½] ï¿½ï¿½Æ®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ç¾ï¿½ ï¿½Ö´ï¿½ ï¿½âº» ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ -->
                         </td>
-                        <th class="ac">ºÎ¼­¸í</th>
-                        <td class="ac">¿µ¾÷ÆÀ</td>
-                        <th class="ac">´ã´çÀÚ</th>
-                        <td class="ac">È«±æµ¿</td>
+                        <th class="ac">ï¿½Î¼ï¿½ï¿½ï¿½</th>
+                        <td class="ac">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</td>
+                        <th class="ac">ï¿½ï¿½ï¿½ï¿½ï¿½</th>
+                        <td class="ac">È«ï¿½æµ¿</td>
                     </tr>
                     <tr>
-                        <th class="ac">ÀüÈ­</th>
+                        <th class="ac">ï¿½ï¿½È­</th>
                         <td class="ac">000-0000-0000</td>
-                        <th class="ac">ÈÞ´ëÆù</th>
+                        <th class="ac">ï¿½Þ´ï¿½ï¿½ï¿½</th>
                         <td class="ac">000-0000-0000</td>
                         <th class="ac">E-Mail</th>
                         <td class="ac">abc@abc.com</td>
@@ -231,27 +231,27 @@
                 </colgroup>
                 <tbody>
                     <tr>
-                        <th colspan="6" scope="row">°í°´ Á¤º¸</th>
+                        <th colspan="6" scope="row">ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½</th>
                     </tr>
                     <tr>
-                        <th class="ac">°í°´¸í</th>
-                        <td class="ac">ÇØ¼Öµ¥ÀÌÅ¸</td>
-                        <th class="ac">ºÎ¼­¸í</th>
-                        <td class="ac">¿µ¾÷ÆÀ</td>
-                        <th class="ac">´ã´çÀÚ</th>
-                        <td class="ac">È«±æµ¿</td>
+                        <th class="ac">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</th>
+                        <td class="ac">ï¿½Ø¼Öµï¿½ï¿½ï¿½Å¸</td>
+                        <th class="ac">ï¿½Î¼ï¿½ï¿½ï¿½</th>
+                        <td class="ac">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</td>
+                        <th class="ac">ï¿½ï¿½ï¿½ï¿½ï¿½</th>
+                        <td class="ac">È«ï¿½æµ¿</td>
                     </tr>
                     <tr>
-                        <th class="ac">ÀüÈ­</th>
+                        <th class="ac">ï¿½ï¿½È­</th>
                         <td class="ac">000-0000-0000</td>
-                        <th class="ac">ÈÞ´ëÆù</th>
+                        <th class="ac">ï¿½Þ´ï¿½ï¿½ï¿½</th>
                         <td class="ac">000-0000-0000</td>
                         <th class="ac">E-Mail</th>
                         <td class="ac">abc@abc.com</td>
                     </tr>
                 </tbody>
             </table>
-            <h4>¸ÅÃâ»çÇ×</h4>
+            <h4>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</h4>
             <form name="frmPurDet">
                 <table class="print mb10">
                     <colgroup>
@@ -260,7 +260,7 @@
                     </colgroup>
                     <thead>
                         <tr>
-                            <th scope="col">ÆÄÆ®³Ê</th>
+                            <th scope="col">ï¿½ï¿½Æ®ï¿½ï¿½</th>
                             <th scope="col">
                                 <table class="inTable">
                                     <colgroup>
@@ -270,10 +270,10 @@
                                         <col style="width:15%;" />
                                     </colgroup>
                                     <tr>
-                                        <td class="ac">¸ÅÃâÇ°¸ñ</td>
-                                        <td class="ac">¼ö·®</td>
-                                        <td class="ac">´Ü°¡</td>
-                                        <td class="ac">¸ÅÃâ±Ý¾×</td>
+                                        <td class="ac">ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½</td>
+                                        <td class="ac">ï¿½ï¿½ï¿½ï¿½</td>
+                                        <td class="ac">ï¿½Ü°ï¿½</td>
+                                        <td class="ac">ï¿½ï¿½ï¿½ï¿½Ý¾ï¿½</td>
                                     </tr>
                                 </table>
                             </th>
@@ -281,7 +281,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <th scope="row">ÇÑ±¹À¯¾¾ºñÁ¦¾à(ÁÖ)</th>
+                            <th scope="row">ï¿½Ñ±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½)</th>
                             <td class="p0" scope="col">
                                 <table class="inTable">
                                     <colgroup>
@@ -291,25 +291,25 @@
                                         <col style="width:15%;" />
                                     </colgroup>
                                     <tr>
-                                        <td class="al">ÇÑÄÄ¿ÀÇÇ½º ÇÑ/±Û ¹æ°úÈÄÇÐ±³¿ë 1³âÀÓ´ë Level A</td>
+                                        <td class="al">ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½Ç½ï¿½ ï¿½ï¿½/ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð±ï¿½ï¿½ï¿½ 1ï¿½ï¿½ï¿½Ó´ï¿½ Level A</td>
                                         <td class="ac">45</td>
                                         <td class="ar">105,000</td>
                                         <td class="ar br0">4,725,000</td>
                                     </tr>
                                     <tr>
-                                        <td class="al">ÇÑÄÄ¿ÀÇÇ½º ÇÑ/±Û ¹æ°úÈÄÇÐ±³¿ë </td>
+                                        <td class="al">ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½Ç½ï¿½ ï¿½ï¿½/ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð±ï¿½ï¿½ï¿½ </td>
                                         <td class="ac">45</td>
                                         <td class="ar">105,000</td>
                                         <td class="ar br0">4,725,000</td>
                                     </tr>
                                     <tr>
-                                        <td class="al">ÇÑÄÄ¿ÀÇÇ½º ÇÑ/±Û ¹æ°úÈÄÇÐ±³¿ë 1³âÀÓ´ë Level B</td>
+                                        <td class="al">ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½Ç½ï¿½ ï¿½ï¿½/ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð±ï¿½ï¿½ï¿½ 1ï¿½ï¿½ï¿½Ó´ï¿½ Level B</td>
                                         <td class="ac">45</td>
                                         <td class="ar">105,000</td>
                                         <td class="ar br0">4,725,000</td>
                                     </tr>
                                     <tr>
-                                        <td class="al">ÇÑÄÄ¿ÀÇÇ½º ÇÑ/±Û ¹æ°úÈÄÇÐ±³¿ë C</td>
+                                        <td class="al">ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½Ç½ï¿½ ï¿½ï¿½/ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð±ï¿½ï¿½ï¿½ C</td>
                                         <td class="ac">45</td>
                                         <td class="ar">105,000</td>
                                         <td class="ar br0">4,725,000</td>
@@ -318,13 +318,13 @@
                             </td>
                         </tr>
                         <tr>
-                            <th scope="row">ÃÑ¸ÅÃâÇÕ°è</th>
-                            <td class="ar">3,000(°ø±Þ°¡¾×) + 300(Vat) = 3,300</td>
+                            <th scope="row">ï¿½Ñ¸ï¿½ï¿½ï¿½ï¿½Õ°ï¿½</th>
+                            <td class="ar">3,000(ï¿½ï¿½ï¿½Þ°ï¿½ï¿½ï¿½) + 300(Vat) = 3,300</td>
                         </tr>
                     </tbody>
                 </table>
 
-                <h4>¸ÅÀÔ»çÇ×</h4>
+                <h4>ï¿½ï¿½ï¿½Ô»ï¿½ï¿½ï¿½</h4>
                 <table class="print mb10">
                     <colgroup>
                         <col width="150" />
@@ -332,7 +332,7 @@
                     </colgroup>
                     <thead>
                         <tr>
-                            <th scope="col">¸ÞÀÔÃ³</th>
+                            <th scope="col">ï¿½ï¿½ï¿½ï¿½Ã³</th>
                             <th scope="col">
                                 <table class="inTable">
                                     <colgroup>
@@ -343,11 +343,11 @@
                                         <col style="width:15%;" />
                                     </colgroup>
                                     <tr>
-                                        <td class="ac">¸ÅÀÔÇ°¸ñ</td>
-                                        <td class="ac">¸¶ÁøÀ²</td>
-                                        <td class="ac">¼ö·®</td>
-                                        <td class="ac">´Ü°¡</td>
-                                        <td class="ac">¸ÅÀÔ±Ý¾×</td>
+                                        <td class="ac">ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½</td>
+                                        <td class="ac">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</td>
+                                        <td class="ac">ï¿½ï¿½ï¿½ï¿½</td>
+                                        <td class="ac">ï¿½Ü°ï¿½</td>
+                                        <td class="ac">ï¿½ï¿½ï¿½Ô±Ý¾ï¿½</td>
                                     </tr>
                                 </table>
                             </th>
@@ -355,7 +355,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <th scope="row">ÇÑ±Û°úÄÄÇ»ÅÍ</th>
+                            <th scope="row">ï¿½Ñ±Û°ï¿½ï¿½ï¿½Ç»ï¿½ï¿½</th>
                             <td class="p0" scope="col">
                                 <table class="inTable">
                                     <colgroup>
@@ -366,14 +366,14 @@
                                         <col style="width:15%;" />
                                     </colgroup>
                                     <tr>
-                                        <td class="al">ÇÑÄÄ¿ÀÇÇ½º ÇÑ/±Û ¹æ°úÈÄÇÐ±³¿ë 1³âÀÓ´ë Level A</td>
+                                        <td class="al">ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½Ç½ï¿½ ï¿½ï¿½/ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð±ï¿½ï¿½ï¿½ 1ï¿½ï¿½ï¿½Ó´ï¿½ Level A</td>
                                         <td class="ac">10%</td>
                                         <td class="ac">45</td>
                                         <td class="ar">105,000</td>
                                         <td class="ar br0">4,725,000</td>
                                     </tr>
                                     <tr>
-                                        <td class="al">ÇÑÄÄ¿ÀÇÇ½º ÇÑ/±Û ¹æ°úÈÄÇÐ±³¿ë </td>
+                                        <td class="al">ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½Ç½ï¿½ ï¿½ï¿½/ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð±ï¿½ï¿½ï¿½ </td>
                                         <td class="ac">10%</td>
                                         <td class="ac">45</td>
                                         <td class="ar">105,000</td>
@@ -383,7 +383,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <th scope="row">¸¶ÀÌÅ©·Î¼ÒÇÁÆ®</th>
+                            <th scope="row">ï¿½ï¿½ï¿½ï¿½Å©ï¿½Î¼ï¿½ï¿½ï¿½Æ®</th>
                             <td class="p0" scope="col">
                                 <table class="inTable">
                                     <colgroup>
@@ -394,14 +394,14 @@
                                         <col style="width:15%;" />
                                     </colgroup>
                                     <tr>
-                                        <td class="al">ÇÑÄÄ¿ÀÇÇ½º ÇÑ/±Û ¹æ°úÈÄÇÐ±³¿ë 1³âÀÓ´ë Level B</td>
+                                        <td class="al">ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½Ç½ï¿½ ï¿½ï¿½/ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð±ï¿½ï¿½ï¿½ 1ï¿½ï¿½ï¿½Ó´ï¿½ Level B</td>
                                         <td class="ac">10%</td>
                                         <td class="ac">45</td>
                                         <td class="ar">105,000</td>
                                         <td class="ar br0">4,725,000</td>
                                     </tr>
                                     <tr>
-                                        <td class="al">ÇÑÄÄ¿ÀÇÇ½º ÇÑ/±Û ¹æ°úÈÄÇÐ±³¿ë C</td>
+                                        <td class="al">ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½Ç½ï¿½ ï¿½ï¿½/ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð±ï¿½ï¿½ï¿½ C</td>
                                         <td class="ac">10%</td>
                                         <td class="ac">45</td>
                                         <td class="ar">105,000</td>
@@ -411,13 +411,13 @@
                             </td>
                         </tr>
                         <tr>
-                            <th scope="row">ÃÑ¸ÅÀÔÇÕ°è</th>
-                            <td class="ar">3,000(°ø±Þ°¡¾×) + 300(Vat) = 3,300</td>
+                            <th scope="row">ï¿½Ñ¸ï¿½ï¿½ï¿½ï¿½Õ°ï¿½</th>
+                            <td class="ar">3,000(ï¿½ï¿½ï¿½Þ°ï¿½ï¿½ï¿½) + 300(Vat) = 3,300</td>
                         </tr>
                     </tbody>
                 </table>
-                <!-- ¼ö¼ö·á Áö±Þ»çÇ×Àº Á¶´Þ°Ç¸¸ ÇØ´ç -->
-                <h4>¼ö¼ö·áÁö±Þ»çÇ×</h4>
+                <!-- ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Þ»ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Þ°Ç¸ï¿½ ï¿½Ø´ï¿½ -->
+                <h4>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Þ»ï¿½ï¿½ï¿½</h4>
                 <table class="print mb10">
                     <colgroup>
                         <col style="width:150px;" />
@@ -427,38 +427,38 @@
                     </colgroup>
                     <thead>
                         <tr>
-                            <th scope="col">¼öÁÖ±¸ºÐ</th>
-                            <th scope="col">ÆÄÆ®³Ê¸í</th>
-                            <th scope="col">¼ö¼ö·áÀ²</th>
-                            <th scope="col">¼ö¼ö·á±Ý¾×</th>
+                            <th scope="col">ï¿½ï¿½ï¿½Ö±ï¿½ï¿½ï¿½</th>
+                            <th scope="col">ï¿½ï¿½Æ®ï¿½Ê¸ï¿½</th>
+                            <th scope="col">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</th>
+                            <th scope="col">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¾ï¿½</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <th scope="row">PSR</th>
-                            <td class="ac">ÇØ¼Öµ¥ÀÌÅ¸</td>
+                            <td class="ac">ï¿½Ø¼Öµï¿½ï¿½ï¿½Å¸</td>
                             <td class="ac">10%</td>
                             <td class="ar">4,725,000</td>
                         </tr>
                         <tr>
-                            <th scope="row">¼öÁÖ</th>
-                            <td class="ac">ÇØ¼Öµ¥ÀÌÅ¸</td>
+                            <th scope="row">ï¿½ï¿½ï¿½ï¿½</th>
+                            <td class="ac">ï¿½Ø¼Öµï¿½ï¿½ï¿½Å¸</td>
                             <td class="ac">10%</td>
                             <td class="ar">4,725,000</td>
                         </tr>
                         <tr>
-                            <th scope="row">¼öÁÖ2</th>
-                            <td class="ac">ÇØ¼Öµ¥ÀÌÅ¸</td>
+                            <th scope="row">ï¿½ï¿½ï¿½ï¿½2</th>
+                            <td class="ac">ï¿½Ø¼Öµï¿½ï¿½ï¿½Å¸</td>
                             <td class="ac">10%</td>
                             <td class="ar">4,725,000</td>
                         </tr>
                         <tr>
-                            <th scope="row">ÃÑ¼ö¼ö·áÇÕ°è</th>
-                            <td class="ar" colspan="3">3,000(°ø±Þ°¡¾×) + 300(Vat) = 3,300</td>
+                            <th scope="row">ï¿½Ñ¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ°ï¿½</th>
+                            <td class="ar" colspan="3">3,000(ï¿½ï¿½ï¿½Þ°ï¿½ï¿½ï¿½) + 300(Vat) = 3,300</td>
                         </tr>
                     </tbody>
                 </table>
-                <!-- ¼ö¼ö·á Áö±Þ»çÇ× ³¡ -->
+                <!-- ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Þ»ï¿½ï¿½ï¿½ ï¿½ï¿½ -->
                 <table class="print mb10" style="width: 350px;" align="right">
                     <colgroup>
                         <col width="50" />
@@ -468,9 +468,9 @@
                     </colgroup>
                     <tbody>
                         <tr>
-                            <th scope="row">¸¶ÁøÀ²</th>
+                            <th scope="row">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</th>
                             <td class="ar"><span id="prd_list_tot_won_percent"></span>%</td>
-                            <th scope="row">¸¶Áø</th>
+                            <th scope="row">ï¿½ï¿½ï¿½ï¿½</th>
                             <td class="ar"><span id="prd_list_tot_won_margin"></span></td>
                         </tr>
                     </tbody>
@@ -482,8 +482,8 @@
                     </colgroup>
                     <tbody>
                         <tr>
-                            <th scope="row">ºñ°í</th>
-                            <td>°è»ê¼­ ¹ßÇàÈÄ ÀÍÀÍ¿ù</td>
+                            <th scope="row">ï¿½ï¿½ï¿½</th>
+                            <td>ï¿½ï¿½ê¼­ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Í¿ï¿½</td>
                         </tr>
                     </tbody>
                 </table>
@@ -499,11 +499,11 @@
                     </colgroup>
                     <tbody>
                         <tr>
-                            <td rowspan="2" class="ac">°á<br />Àç</td>
-                            <td class="ac">´ã ´ç</td>
-                            <td class="ac">ÆÀ Àå</td>
-                            <td class="ac">¿µ¾÷°ü¸®ºÎÀå</td>
-                            <td class="ac">´ëÇ¥ÀÌ»ç</td>
+                            <td rowspan="2" class="ac">ï¿½ï¿½<br />ï¿½ï¿½</td>
+                            <td class="ac">ï¿½ï¿½ ï¿½ï¿½</td>
+                            <td class="ac">ï¿½ï¿½ ï¿½ï¿½</td>
+                            <td class="ac">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</td>
+                            <td class="ac">ï¿½ï¿½Ç¥ï¿½Ì»ï¿½</td>
                         </tr>
                         <tr>
                             <td>&nbsp;</td>

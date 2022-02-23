@@ -684,13 +684,13 @@ function CommonClass() {
                                 return '<li><a href="javascript:;" class="pageOn">' + this.value + '</a></li>&nbsp;';
                             }
                         case 'next':
-                            return '</ul><a href="javascript:;" class="pageArr2"><img src="/Images/admin/page_next.png" alt="다음"></a>&nbsp;';
+                            return '</ul><a href="javascript:;" class="pageArr2"><img src="./Images/admin/page_next.png" alt="다음"></a>&nbsp;';
                         case 'prev':
-                            return '<a href="javascript:;" class="pageArr1"><img src="/Images/admin/page_pre.png" alt="이전" /></a><ul>';
+                            return '<a href="javascript:;" class="pageArr1"><img src="./Images/admin/page_pre.png" alt="이전" /></a><ul>';
                         case 'first':
-                            return '<a href="javascript:;" class="pageArr1"><img src="/Images/admin/page_first.png" alt="맨처음" /></a>&nbsp;';
+                            return '<a href="javascript:;" class="pageArr1"><img src="./Images/admin/page_first.png" alt="맨처음" /></a>&nbsp;';
                         case 'last':
-                            return '<a href="javascript:;" class="pageArr2"><img src="/Images/admin/page_last.png" alt="맨마지막"></a>&nbsp;';
+                            return '<a href="javascript:;" class="pageArr2"><img src="./Images/admin/page_last.png" alt="맨마지막"></a>&nbsp;';
                             //case 'block':
                             //    if (this.value != this.page)
                             //        return '<span class="pageNum"><a> ' + this.value + '</a></span>';
