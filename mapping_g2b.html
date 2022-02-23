@@ -1,0 +1,303 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>블루포트 발주시스템</title>
+<link type="text/css" rel="stylesheet" href="/Css/A_common.css" />
+</head>
+
+<body>
+<div class="A_center" class="A_Center_popup">
+  <h3>분할납부 요구 통지서 매핑</h3>
+  <div class="tWrap">
+    	<table class="tableStyle">
+        	<colgroup>
+        		<col style="width:20%">
+        		<col style="width:80%">
+        	</colgroup>
+            <tr>
+        		<th>요구통지서 업로드</th>
+                <td><input type="text" class="inp_txt_file" /><input type="button" value="Excel 업로드" class="inp_btn"/>&nbsp; | <a href="#" class="btn_gray">매핑 적용</a></td>
+        	</tr>
+        </table>
+  </div>
+  <h4>고객 회사 정보</h4>
+  <div class="tWrap">
+    <table class="tableStyle">
+      <colgroup>
+          <col style="width:4%">
+          <col style="width:8%">
+          <col style="width:8%">
+          <col style="width:8%">
+          <col style="width:12%">
+          <col style="width:15%">
+          <col style="width:7%">
+          <col style="width:15%">
+          <col>
+          <col style="width:4%">
+      </colgroup>
+      <tr>
+        <th></th>
+        <th>사업자번호</th>
+        <th>구분1</th>
+        <th>구분2</th>
+        <th>회사명</th>
+        <th>영문 회사명</th>
+        <th>우편번호</th>
+        <th>주소</th>
+        <th>영문 주소</th>
+        <th>확인</th>
+      </tr>
+      <tr>
+        <td class="ac">Input</td>
+        <td class="ac">2208208198</td>
+        <td class="ac"><select class="select_style">
+                <option selected="selected">-</option>
+                <option>공공</option>
+                <option>교육</option>
+                <option>기업</option>
+                <option>기타</option>
+                </select></td>
+        <td class="ac"><select class="select_style">
+                	<option>관공서</option>
+                	<option>관공서</option>
+                	<option>관공서</option>
+                </select></td>
+        <td class="ac"><input type="text" class="inp_txt3" value="(사)한국지식재산보호협회"/></td>
+        <td class="ac"><input type="text" class="inp_txt3" value=""/></td>
+        <td class="ac"><input type="text" class="inp_txt" value="135-980"/></td>
+        <td class="ac"><input type="text" class="inp_txt3" value="서울특별시 강남구 테헤란로 131, 한국지식재산보호협회"/></td>
+        <td class="ac"><input type="text" class="inp_txt3" value="647-9, Yeoksam-dong, Gangnam-gu, Seoul, KOrea"/></td>
+        <td class="ac"><input type="radio" value="" checked/></td>
+      </tr>
+      <tr>
+        <td class="ac">Load</td>
+        <td class="ac">2208208198</td>
+        <td class="ac"><select class="select_style">
+                <option selected="selected">-</option>
+                <option>공공</option>
+                <option>교육</option>
+                <option>기업</option>
+                <option>기타</option>
+                </select></td>
+        <td class="ac"><select class="select_style">
+                	<option>관공서</option>
+                	<option>관공서</option>
+                	<option>관공서</option>
+                </select></td>
+        <td class="ac"><input type="text" class="inp_txt3" value="(사)한국지식재산보호협회"/></td>
+        <td class="ac"><input type="text" class="inp_txt3" value=""/></td>
+        <td class="ac"><input type="text" class="inp_txt" value="135-980"/></td>
+        <td class="ac"><input type="text" class="inp_txt3" value="서울특별시 강남구 테헤란로 131, 한국지식재산보호협회"/></td>
+        <td class="ac"><input type="text" class="inp_txt3" value="647-9, Yeoksam-dong, Gangnam-gu, Seoul, KOrea"/></td>
+        <td class="ac"><input type="radio" value="" /></td>
+      </tr>
+    </table>
+  </div>
+  <h4>고객 담당자 정보</h4>
+  <div class="tWrap pb10">
+    <table class="tableStyle">
+      <colgroup>
+          <col style="width:4%">
+          <col style="width:10%">
+          <col style="width:5%">
+          <col style="width:15%">
+          <col style="width:8%">
+          <col>
+          <col style="width:11%">
+          <col style="width:11%">
+          <col style="width:11%">
+          <col style="width:4%">
+      </colgroup>
+      <tr>
+        <th></th>
+        <th>직무</th>
+        <th>담당자</th>
+        <th>영문 담당자</th>
+        <th>부서</th>
+        <th>이메일</th>
+        <th>전화</th>
+        <th>휴대폰</th>
+        <th>팩스</th>
+        <th>확인</th>
+      </tr>
+      <tr>
+        <td class="ac">Input</td>
+        <td class="ac"><select class="select_style">
+                	<option>구매담당</option>
+                	<option>실무담당</option>
+                </select></td>
+        <td class="ac">김명걸</td>
+        <td class="ac"><input type="text" class="inp_txt3" value=""/></td>
+        <td class="ac"><input type="text" class="inp_txt" value=""/></td>
+        <td class="ac"><input type="text" class="inp_txt3" value=""/></td>
+        <td class="ac">02-2183-5817</td>
+        <td class="ac"><input type="text" class="inp_txt3" value=""/></td>
+        <td class="ac">202-2183-5899</td>
+        <td class="ac"><input type="radio" value="" checked/></td>
+      </tr>
+    </table>
+  </div>
+  <div class="scrollFrame clfix">
+      <div class="leftarea">Load</div>
+      <div class="rightarea"><table class="tableStyle">
+              <colgroup>
+                  <col style="width:2%">
+                  <col style="width:10%">
+                  <col style="width:5%">
+                  <col style="width:15%">
+                  <col style="width:8%">
+                  <col>
+                  <col style="width:11%">
+                  <col style="width:11%">
+                  <col style="width:11%">
+                  <col style="width:4%">
+              </colgroup>
+              <tr>
+                <th>No</th>
+                <th>직무</th>
+                <th>담당자</th>
+                <th>영문 담당자</th>
+                <th>부서</th>
+                <th>이메일</th>
+                <th>전화</th>
+                <th>휴대폰</th>
+                <th>팩스</th>
+                <th>확인</th>
+              </tr>
+              <tr>
+                <td class="ac">1</td>
+                <td class="ac">구매담당</td>
+                <td class="ac">김명걸</td>
+                <td class="ac"><input type="text" class="inp_txt3" value=""/></td>
+                <td class="ac"><input type="text" class="inp_txt" value=""/></td>
+                <td class="ac"><input type="text" class="inp_txt3" value=""/></td>
+                <td class="ac">02-2183-5817</td>
+                <td class="ac"><input type="text" class="inp_txt3" value=""/></td>
+                <td class="ac">202-2183-5899</td>
+                <td class="ac"><input type="radio" value="" /></td>
+              </tr>
+              <tr>
+                <td class="ac">2</td>
+                <td class="ac">실무담당</td>
+                <td class="ac">김명걸</td>
+                <td class="ac"><input type="text" class="inp_txt3" value=""/></td>
+                <td class="ac"><input type="text" class="inp_txt" value=""/></td>
+                <td class="ac"><input type="text" class="inp_txt3" value=""/></td>
+                <td class="ac">02-2183-5817</td>
+                <td class="ac"><input type="text" class="inp_txt3" value=""/></td>
+                <td class="ac">202-2183-5899</td>
+                <td class="ac"><input type="radio" value=""/></td>
+              </tr>
+              <tr>
+                <td class="ac">3</td>
+                <td class="ac"><select class="select_style">
+                	<option>구매담당</option>
+                	<option>실무담당</option>
+                        </select></td>
+                <td class="ac">김명걸</td>
+                <td class="ac"><input type="text" class="inp_txt3" value=""/></td>
+                <td class="ac"><input type="text" class="inp_txt" value=""/></td>
+                <td class="ac"><input type="text" class="inp_txt3" value=""/></td>
+                <td class="ac">02-2183-5817</td>
+                <td class="ac"><input type="text" class="inp_txt3" value=""/></td>
+                <td class="ac">202-2183-5899</td>
+                <td class="ac"><input type="radio" value="" /></td>
+              </tr>
+            </table>
+        </div>
+    </div>
+	<h4>고객 특이사항</h4>
+    <div class="tWrap">
+    	<table class="tableStyle">
+        	<colgroup>
+        		<col style="width:8%">
+        		<col style="width:92%">
+        	</colgroup>
+            <tr>
+        		<th class="height_style2">비고</th>
+                <td class="height_style2"><textarea class="ta_style"></textarea></td>
+        	</tr>
+        </table>
+    </div>
+    
+  <h4>주문 정보</h4>
+  <div class="tWrap">
+    <table class="tableStyle">
+      <colgroup>
+        		<col style="width:15%">
+        		<col style="width:18%">
+        		<col style="width:15%">
+        		<col style="width:18%">
+        		<col style="width:15%">
+        		<col style="width:19%">
+      </colgroup>
+      <tr>
+        <th>납품요구번호</th>
+        <td>12-12-8-14371-00</td>
+        <th>조달청명</th>
+        <td>서울지방조달청</td>
+        <th>대금지급방식</th>
+        <td>미지급</td>
+      </tr>
+      <tr>
+        <th>납품요구일</th>
+        <td>2012-06-01</td>
+        <th>납품기한</th>
+        <td colspan="3">2012-06-30</td>
+      </tr>
+    </table>
+  </div>
+  <h4>제품 정보</h4>
+  <div class="tWrap">
+    <table class="tableStyle mb10">
+      <colgroup>
+      <col style="width:4%">
+      <col style="width:10%">
+      <col style="">
+      <col style="width:8%">
+      <col style="width:10%">
+      <col style="width:10%">
+      <col style="width:10%">
+      <col style="width:10%">
+      </colgroup>
+      <tr>
+        <th>No</th>
+        <th>물품식별번호</th>
+        <th>제품명</th>
+        <th>수량</th>
+        <th>발주단가</th>
+        <th>발주단가(VAT)</th>
+        <th>발주금액</th>
+        <th>발주금액(VAT)</th>
+      </tr>
+      <tr>
+        <td class="ac">1</td>
+        <td class="ac">22233355</td>
+        <td class="ac">한컴오피스 한글 2010 SE 행망용 라이선스</td>
+        <td class="ac">18</td>
+        <td class="ar">90,000원</td>
+        <td class="ar"><span class="em">99,000원</span></td>
+        <td class="ar">1,620,000원</td>
+        <td class="ar"><span class="em">1,782,000원</span></td>
+      </tr>
+    </table>
+    <table class="summary2">
+      <colgroup>
+          <col style="width:150px">
+          <col style="width:150px">
+      </colgroup>
+        <tr>
+            <th>발주총액(VAT)</th>
+            <td><span class="em_red">1,782,000원</span></td>
+        </tr>
+    </table>
+  </div>
+  <div class="btns clfix">
+    <a href="#" class="rbtn_line">닫기</a>
+    <a href="#" class="rbtn_bg">적용</a>
+  </div>
+</div>
+<!--//A_center-->
+</body>
+</html>

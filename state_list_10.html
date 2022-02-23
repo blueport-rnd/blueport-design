@@ -1,0 +1,413 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>블루포트 발주시스템</title>
+<link type="text/css" rel="stylesheet" href="/Css/A_common.css" />
+<script type="text/javascript" src="/Scripts/jquery-1.6.2.min.js"></script>
+<script type="text/javascript" src="/Scripts/include.js"></script>
+</head>
+
+<body>
+<div id="A_head"></div>
+<div class="A_center">
+  <h3>완료 목록</h3>
+  <div class="order_state">
+    <ul class="clfix">
+      <li><a href="state_list_0.html" class="complete">작성중</a></li>
+      <li class="arr"></li>
+      <li><a href="state_list_1.html" class="complete">발주 대기</a></li>
+      <li class="arr"></li>
+      <li><a href="state_list_2.html" class="complete">발주 승인</a></li>
+      <li class="arr"></li>
+      <li><a href="state_list_3.html" class="complete">출고 대기</a></li>
+      <li class="arr"></li>
+      <li><a href="state_list_4.html" class="complete">검수 요청</a></li>
+      <li class="arr"></li>
+      <li><a href="state_list_5.html" class="complete">검수 완료</a></li>
+      <li class="arr"></li>
+      <li><a href="state_list_6.html" class="complete">세금계산서</a></li>
+      <li class="arr"></li>
+      <li><a href="state_list_7.html" class="complete">대금청구</a></li>
+      <li class="arr"></li>
+      <li><a href="state_list_8.html" class="complete">대금 수금</a></li>
+      <li class="arr"></li>
+      <li><a href="state_list_9.html" class="complete">수수료 지급</a></li>
+      <li class="arr"></li>
+      <li><a href="state_list_10.html" class="complete">완료</a></li>
+      <li class="block"></li>
+      <li><a href="state_list_all.html">전체 조회</a></li>
+    </ul>
+  </div>
+  <h4>검색</h4>
+  <div class="tWrap">
+    <table class="tableStyle">
+      <colgroup>
+      <col style="width:7%">
+      <col style="width:12%">
+      <col style="width:7%">
+      <col style="width:12%">
+      <col style="width:7%">
+      <col style="width:12%">
+      <col style="width:7%">
+      <col style="width:12%">
+      <col style="width:7%">
+      <col style="width:12%">
+      <col>
+      </colgroup>
+      <tr>
+        <th>수주구분</th>
+        <td><select name="select" class="select_style">
+            <option selected>전체</option>
+            <option>조달</option>
+            <option>수의</option>
+            <option>MRO</option>
+          </select>
+          <select name="select2" class="select_style">
+            <option selected>전체</option>
+            <option>공공</option>
+            <option>교육</option>
+            <option>기업</option>
+            <option>기타</option>
+            <!-- 상위 조달 / 하위 수의 -->
+            <option>상품</option>
+            <option>솔루션</option>
+            <option>용역</option>
+            <option>기타</option>
+            <!-- 상위 수의 / 하위 MRO -->
+            <option>상품</option>
+            <option>정기</option>
+            <option>기타</option>
+          </select></td>
+        <th>시장구분</th>
+        <td><select name="select2" class="select_style">
+            <option selected>전체</option>
+            <option>공공</option>
+            <option>교육</option>
+            <option>기업</option>
+          </select>
+          <select name="select2" class="select_style">
+            <option>전체</option>
+            <option>전체</option>
+            <option>전체</option>
+          </select></td>
+        <th>검색기간</th>
+        <td colspan="3"><select name="select2" class="select_style fl">
+            <option selected>-</option>
+            <option>납품요구일</option>
+            <option>발주서입력일</option>
+            <option>발주작성완료일</option>
+            <option>발주승인일</option>
+            <option>물품발송일</option>
+            <!-- 하위 조달만 -->
+            <option>검수요청일</option>
+            <!-- 하위 조달만 -->
+            <option>검수완료일</option>
+            <option>세금계산서발행일</option>
+            <!-- 하위 조달만 -->
+            <option>대금청구일</option>
+            <option>대금완료일</option>
+            <!-- 하위 조달만 -->
+            <option>파트너결재완료일</option>
+            <!-- 하위 조달만 -->
+            <option>납품기한</option>
+            <option>결재예정일</option>
+          </select>
+          <input type="text" class="input_cal" name="SearchDateStartDate" />
+          <span class="txt_style1"> ~ </span>
+          <input type="text" class="input_cal" name="SearchDateStartDate" /></td>
+        <th>지급방법</th>
+        <td><select name="select2" class="select_style">
+            <option selected>전체</option>
+            <option>대지급</option>
+            <option>선지급</option>
+            <option>직불</option>
+            <option>익월말 현금</option>
+            <option>당월말 현금</option>
+            <option>선입금</option>
+            <option>카드</option>
+            <option>리스</option>
+            <option>기타</option>
+          </select>
+          /
+          <select name="select2" class="select_style">
+            <option selected>전체</option>
+            <option>미수채권</option>
+            <option>미수금</option>
+            <option>수금완료</option>
+          </select></td>
+        <td rowspan="3" class="ac"><input type="button" value="검색" class="btn_search2"></td>
+      </tr>
+      <tr>
+        <th> <select name="select2" class="select_style">
+            <option selected>작성자</option>
+            <option>영업담당자</option>
+          </select>
+        </th>
+        <td><input type="text" class="inp_txt" /></td>
+        <th>납품요구번호</th>
+        <td><input type="text" class="inp_txt" /></td>
+        <th>벤더</th>
+        <td><input type="text" class="inp_txt" /></td>
+        <th>제품명</th>
+        <td><input type="text" class="inp_txt" /></td>
+        <th>제품구분 / 지역</th>
+        <td><input type="text" class="inp_txt5" />
+          /
+          <select name="select2" class="select_style">
+            <option selected>전체</option>
+            <option>서울</option>
+            <option>부산</option>
+            <option>인천</option>
+            <option>대구</option>
+            <option>대전</option>
+            <option>울산</option>
+            <option>광주</option>
+            <option>경기</option>
+            <option>강원</option>
+            <option>충북</option>
+            <option>충남</option>
+            <option>전북</option>
+            <option>전남</option>
+            <option>경북</option>
+            <option>경남</option>
+            <option>제주</option>
+          </select></td>
+      </tr>
+      <tr>
+        <th>승인번호</th>
+        <td><input type="text" class="inp_txt5" />
+          -
+          <input type="text" class="inp_txt5" /></td>
+        <th>발주번호</th>
+        <td><input type="text" class="inp_txt" /></td>
+        <th> <select name="select2" class="select_style">
+            <option selected>고객회사명</option>
+            <option>고객담당자</option>
+          </select>
+        </th>
+        <td><input type="text" class="inp_txt" /></td>
+        <th> <select name="select3" class="select_style">
+            <option selected>파트너명</option>
+            <option>파트너담당자</option>
+          </select>
+        </th>
+        <td><input type="text" class="inp_txt" /></td>
+        <th>비고</th>
+        <td><input type="text" class="inp_txt" /></td>
+      </tr>
+    </table>
+  </div>
+  <div class="h4_style2 clfix pb5">
+    <h4>배송작업 목록</h4>
+    <div class="tit_right">
+      <div class="txt_total pr5">· Total : 100건</div>
+    </div>
+  </div>
+  <div class="tWrap">
+    <table class="tableStyle">
+      <colgroup>
+      <col style="width:35px">
+      <col style="width:4%">
+      <col style="width:5%">
+      <col style="">
+      <col style="width:40%">
+      <col style="width:7%">
+      <col style="width:5%">
+      <col style="width:5%">
+      <col style="width:5%">
+      <col style="width:3%">
+      <col style="width:5%">
+      <col style="width:5%">
+      <col style="width:5%">
+      </colgroup>
+      <tr>
+        <th><input type="checkbox"></th>
+        <th>구분</th>
+        <th>발주번호</th>
+        <th>고객명</th>
+        <th> <table class="inTable">
+            <colgroup>
+            <col style="">
+            <col style="width:8%;">
+            <col style="width:13%;">
+            <col style="width:5%;">
+            <col style="width:14%;">
+            <col style="width:7%;">
+            <col style="width:7%;">
+            </colgroup>
+            <tr>
+              <th class="bb0">제품명</th>
+              <th class="bb0">제품구분</th>
+              <th class="bb0">매출단가</th>
+              <th class="bb0">수량</th>
+              <th class="bb0">매출금액</th>
+              <th class="bb0">라이선스</th>
+              <th class="bb0 br0">매출관리</th>
+            </tr>
+          </table>
+        </th>
+        <th>매출총액</th>
+        <th>PSR</th>
+        <th>수주</th>
+        <th>수주2</th>
+        <th>비고</th>
+        <th>발주 요청일</th>
+        <th>작성자</th>
+        <th>완료일</th>
+      </tr>
+      <tr class="listStyle1" onMouseOver="this.style.backgroundColor='#e3f3f5';" onMouseOut="this.style.backgroundColor='#f5f4f2';">
+        <td class="ac"><input type="checkbox"></td>
+        <td class="ac">공공/조달</td>
+        <td class="ac">20120612001</td>
+        <td class="ac">투지스인터랙티브</td>
+        <td class="ac bb0"><table class="inTable">
+            <colgroup>
+            <col style="">
+            <col style="width:8%;">
+            <col style="width:13%;">
+            <col style="width:5%;">
+            <col style="width:14%;">
+            <col style="width:7%;">
+            <col style="width:7%;">
+            </colgroup>
+            <tr>
+              <td class="al">1. 한컴오피스 한/글 방과후학교용 1년임대 Level A</td>
+              <td class="ac">라이선스</td>
+              <td class="ar">105,000</td>
+              <td class="ac">45</td>
+              <td class="ar">4,725,000</td>
+              <td class="ac"><a href="#" class="btn_ico2"><img src="/Images/admin/ico_document.png" alt="라이선스"></a></td>
+              <td class="ac br0"><a href="#" class="btn_ico2"><img src="/Images/admin/ico_document.png" alt="매출관리"></a></td>
+            </tr>
+            <tr>
+              <td class="al">2. 한컴오피스 한/글 방과후학교용 </td>
+              <td class="ac">라이선스</td>
+              <td class="ar">105,000</td>
+              <td class="ac">45</td>
+              <td class="ar">4,725,000</td>
+              <td class="ac"><a href="#" class="btn_ico2"><img src="/Images/admin/ico_document.png" alt="라이선스"></a></td>
+              <td class="ac br0"><a href="#" class="btn_ico2"><img src="/Images/admin/ico_document.png" alt="매출관리"></a></td>
+            </tr>
+          </table></td>
+        <td class="ar b"> 4,725,000<br>
+          (5,197,500) </td>
+        <td class="ac">PSR 파트너명</td>
+        <td class="ac">수주 파트너명</td>
+        <td class="ac">수주2 파트너명</td>
+        <td class="ac"><a href="#" class="btn_ico2"><img src="/Images/admin/ico_document.png" alt="비고"></a></td>
+        <td class="ac">2016-06-04</td>
+        <td class="ac">김미정</td>
+        <td class="ac">2016-06-04</td>
+      </tr>
+      <tr class="listStyle2" onMouseOver="this.style.backgroundColor='#e3f3f5';" onMouseOut="this.style.backgroundColor='#fff';">
+        <td class="ac"><input type="checkbox"></td>
+        <td class="ac">공공/수의</td>
+        <td class="ac">20120612001</td>
+        <td class="ac">투지스인터랙티브</td>
+        <td class="ac bb0"><table class="inTable">
+            <colgroup>
+            <col style="">
+            <col style="width:8%;">
+            <col style="width:13%;">
+            <col style="width:5%;">
+            <col style="width:14%;">
+            <col style="width:7%;">
+            <col style="width:7%;">
+            </colgroup>
+            <tr>
+              <td class="al">1. 한컴오피스 한/글 방과후학교용 1년임대 Level A</td>
+              <td class="ac">라이선스</td>
+              <td class="ar">105,000</td>
+              <td class="ac">45</td>
+              <td class="ar">4,725,000</td>
+              <td class="ac"><a href="#" class="btn_ico2"><img src="/Images/admin/ico_document.png" alt="라이선스"></a></td>
+              <td class="ac br0"><a href="#" class="btn_ico2"><img src="/Images/admin/ico_document.png" alt="매출관리"></a></td>
+            </tr>
+            <tr>
+              <td class="al">2. 한컴오피스 한/글 방과후학교용 </td>
+              <td class="ac">라이선스</td>
+              <td class="ar">105,000</td>
+              <td class="ac">45</td>
+              <td class="ar">4,725,000</td>
+              <td class="ac"><a href="#" class="btn_ico2"><img src="/Images/admin/ico_document.png" alt="라이선스"></a></td>
+              <td class="ac br0"><a href="#" class="btn_ico2"><img src="/Images/admin/ico_document.png" alt="매출관리"></a></td>
+            </tr>
+          </table></td>
+        <td class="ar b"> 4,725,000<br>
+          (5,197,500) </td>
+        <td class="ac">&nbsp;</td>
+        <td class="ac"><span class="red">여신부족파트너명</span></td>
+        <td class="ac">&nbsp;</td>
+        <td class="ac"><a href="#" class="btn_ico2"><img src="/Images/admin/ico_document_gray.png" alt="비고"></a></td>
+        <td class="ac">2016-06-04</td>
+        <td class="ac">김승지</td>
+        <td class="ac">2016-06-04</td>
+      </tr>
+      <tr class="listStyle1" onMouseOver="this.style.backgroundColor='#e3f3f5';" onMouseOut="this.style.backgroundColor='#f5f4f2';">
+        <td class="ac"><input type="checkbox"></td>
+        <td class="ac">공공/수의</td>
+        <td class="ac">20120612001</td>
+        <td class="ac">투지스인터랙티브</td>
+        <td class="ac bb0"><table class="inTable">
+            <colgroup>
+            <col style="">
+            <col style="width:8%;">
+            <col style="width:13%;">
+            <col style="width:5%;">
+            <col style="width:14%;">
+            <col style="width:7%;">
+            <col style="width:7%;">
+            </colgroup>
+            <tr>
+              <td class="al">1. 한컴오피스 한/글 방과후학교용 1년임대 Level A</td>
+              <td class="ac">라이선스</td>
+              <td class="ar">105,000</td>
+              <td class="ac">45</td>
+              <td class="ar">4,725,000</td>
+              <td class="ac"><a href="#" class="btn_ico2"><img src="/Images/admin/ico_document.png" alt="라이선스"></a></td>
+              <td class="ac br0"><a href="#" class="btn_ico2"><img src="/Images/admin/ico_document.png" alt="매출관리"></a></td>
+            </tr>
+            <tr>
+              <td class="al">2. 한컴오피스 한/글 방과후학교용 </td>
+              <td class="ac">라이선스</td>
+              <td class="ar">105,000</td>
+              <td class="ac">45</td>
+              <td class="ar">4,725,000</td>
+              <td class="ac"><a href="#" class="btn_ico2"><img src="/Images/admin/ico_document.png" alt="라이선스"></a></td>
+              <td class="ac br0"><a href="#" class="btn_ico2"><img src="/Images/admin/ico_document.png" alt="매출관리"></a></td>
+            </tr>
+          </table></td>
+        <td class="ar b"> 4,725,000<br>
+          (5,197,500) </td>
+        <td class="ac">&nbsp;</td>
+        <td class="ac">수주 파트너명</td>
+        <td class="ac">&nbsp;</td>
+        <td class="ac"><a href="#" class="btn_ico2"><img src="/Images/admin/ico_document_gray.png" alt="비고"></a></td>
+        <td class="ac">2016-06-04</td>
+        <td class="ac">(주)해솔데이타 / 김승지</td>
+        <td class="ac">2016-06-04</td>
+      </tr>
+    </table>
+  </div>
+  <div class="page"> <a href="#" class="pageArr1"><img src="/Images/admin/page_first.png" alt="맨처음"></a> <a href="#" class="pageArr1"><img src="/Images/admin/page_pre.png" alt="이전"></a>
+    <ul>
+      <li><a href="#" class="pageOn">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#">4</a></li>
+      <li><a href="#">5</a></li>
+      <li><a href="#">6</a></li>
+      <li><a href="#">7</a></li>
+      <li><a href="#">8</a></li>
+      <li><a href="#">9</a></li>
+      <li><a href="#">10</a></li>
+    </ul>
+    <a href="#" class="pageArr2"><img src="/Images/admin/page_next.png" alt="다음"></a> <a href="#" class="pageArr2"><img src="/Images/admin/page_last.png" alt="맨마지막"></a> </div>
+  <div class="btns clfix">
+    <div class="btns_l"> <a href="#" class="rbtn_down"><img src="/Images/admin/ico_excel.png" alt="엑셀파일"> 다운로드</a> </div>
+  </div>
+</div>
+<!--//A_center-->
+</body>
+</html>

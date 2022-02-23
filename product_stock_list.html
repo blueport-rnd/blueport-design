@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>블루포트 발주시스템</title>
+<link type="text/css" rel="stylesheet" href="/Css/A_common.css" />
+<script type="text/javascript" src="/Scripts/jquery-1.6.2.min.js"></script>
+<script type="text/javascript" src="/Scripts/include.js"></script>
+</head>
+
+<body>
+<div id="A_head"></div>
+<div class="A_center">
+  <h3>제품 입출고 관리</h3>
+  <h4>검색</h4>
+  <div class="tWrap">
+    <table class="tableStyle">
+      <colgroup>
+      <col style="width:7%">
+      <col style="width:12%">
+      <col style="width:7%">
+      <col style="width:12%">
+      <col style="width:7%">
+      <col style="width:12%">
+      <col style="width:7%">
+      <col style="width:12%">
+      <col style="width:7%">
+      <col style="width:12%">
+      <col>
+      </colgroup>
+      <tr>
+        <th>검색기간</th>
+        <td colspan="3"><select name="select3" class="select_style fl">
+            <option selected>-</option>
+            <option>발주작성완료일</option>
+            <option>발주승인일</option>
+            <option>물품발송일</option>
+          </select>
+          <input type="text" class="input_cal" name="SearchDateStartDate" />
+          <span class="txt_style1"> ~ </span>
+          <input type="text" class="input_cal" name="SearchDateStartDate3" /></td>
+        <th>현황</th>
+        <td><select name="select2" class="select_style">
+            <option selected>전체</option>
+            <option>입고/출고</option>
+            <option>입고</option>
+            <option>출고</option>
+          </select></td>
+        <th>승인번호</th>
+        <td><input type="text" class="inp_txt" /></td>
+        <th>매입번호</th>
+        <td><input type="text" class="inp_txt" /></td>
+        <td rowspan="2" class="ac"><input type="button" value="검색" class="btn_search3"></td>
+      </tr>
+      <tr>
+        <th><select name="select4" class="select_style">
+            <option>파트너</option>
+            <option>매입처</option>
+            <option>고객</option>
+            <option>벤더</option>
+          </select></th>
+        <td><input type="text" class="inp_txt" /></td>
+        <th>제품명</th>
+        <td><input type="text" class="inp_txt" /></td>
+        <th>구분</th>
+        <td><input type="text" class="inp_txt" /></td>
+        <th>재고유무</th>
+        <td><select name="select5" class="select_style">
+            <option selected>전체</option>
+            <option>재고 있음</option>
+            <option>재고 없음</option>
+            <option>마이너스 재고</option>
+          </select></td>
+        <th>입출고 비고</th>
+        <td><input type="text" class="inp_txt" /></td>
+      </tr>
+    </table>
+  </div>
+  <div class="h4_style2 clfix pb5">
+    <h4>입출고 목록</h4>
+    <div class="tit_right">
+      <div class="txt_total pr5">· Total : 100건</div>
+    </div>
+  </div>
+  <div class="tWrap">
+    <table class="tableStyle">
+      <colgroup>
+      <col style="width:5%">
+      <col style="width:5%">
+      <col style="width:4%">
+      <col style="width:5%">
+      <col style="width:5%">
+      <col style="width:4%">
+      <col style="width:7%">
+      <col style="width:7%">
+      <col style="width:7%">
+      <col style="width:7%">
+      <col style="">
+      <col style="width:4%">
+      <col style="width:4%">
+      <col style="width:4%">
+      <col style="width:4%">
+      <col style="width:4%">
+      <col style="width:4%">
+      </colgroup>
+      <tr>
+        <th>승인일</th>
+        <th>출고일</th>
+        <th>현황</th>
+        <th>승인번호</th>
+        <th>매입번호</th>
+        <th>수주구분</th>
+        <th>파트너</th>
+        <th>매입처</th>
+        <th>고객</th>
+        <th>벤더</th>
+        <th>제품명</th>
+        <th>구분</th>
+        <th>이전재고</th>
+        <th>입고</th>
+        <th>출고</th>
+        <th>잔여재고</th>
+        <th>입출고 비고</th>
+      </tr>
+      <tr class="listStyle1" onMouseOver="this.style.backgroundColor='#e3f3f5';" onMouseOut="this.style.backgroundColor='#f5f4f2';">
+        <td class="ac">2016-05-01</td>
+        <td class="ac">2016-05-01</td>
+        <td class="ac">입고/출고</td>
+        <td class="ac">160612001</td>
+        <td class="ac">354</td>
+        <td class="ac">수의</td>
+        <td class="ac">다우기술</td>
+        <td class="ac">다우기술</td>
+        <td class="ac">서울시청</td>
+        <td class="ac">Autodesk</td>
+        <td class="al"> AutoCAD 1year</td>
+        <td class="ac">라이선스</td>
+        <td class="ac">10</td>
+        <td class="ac">1</td>
+        <td class="ac">2</td>
+        <td class="ac">9</td>
+        <td class="ac"><a href="#" class="btn_ico2"><img src="/Images/admin/ico_document.png" alt="입출고 관리"></a></td>
+      </tr>
+      <tr class="listStyle2" onMouseOver="this.style.backgroundColor='#e3f3f5';" onMouseOut="this.style.backgroundColor='#fff';">
+        <td class="ac">2016-05-01</td>
+        <td class="ac">2016-05-03</td>
+        <td class="ac">입고/출고</td>
+        <td class="ac">160612001</td>
+        <td class="ac">354</td>
+        <td class="ac">수의</td>
+        <td class="ac">다우기술</td>
+        <td class="ac">다우기술</td>
+        <td class="ac">서울시청</td>
+        <td class="ac">Autodesk</td>
+        <td class="al"> AutoCAD 1year</td>
+        <td class="ac">라이선스</td>
+        <td class="ac">10</td>
+        <td class="ac">1</td>
+        <td class="ac">2</td>
+        <td class="ac">9</td>
+        <td class="ac"><a href="#" class="btn_ico2"><img src="/Images/admin/ico_document.png" alt="입출고 관리"></a></td>
+      </tr>
+    </table>
+  </div>
+  <div class="page"> <a href="#" class="pageArr1"><img src="/Images/admin/page_first.png" alt="맨처음"></a> <a href="#" class="pageArr1"><img src="/Images/admin/page_pre.png" alt="이전"></a>
+    <ul>
+      <li><a href="#" class="pageOn">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#">4</a></li>
+      <li><a href="#">5</a></li>
+      <li><a href="#">6</a></li>
+      <li><a href="#">7</a></li>
+      <li><a href="#">8</a></li>
+      <li><a href="#">9</a></li>
+      <li><a href="#">10</a></li>
+    </ul>
+    <a href="#" class="pageArr2"><img src="/Images/admin/page_next.png" alt="다음"></a> <a href="#" class="pageArr2"><img src="/Images/admin/page_last.png" alt="맨마지막"></a> </div>
+  <div class="btns clfix">
+    <div class="btns_l"> <a href="#" class="rbtn_down"><img src="/Images/admin/ico_excel.png" alt="엑셀파일"> 다운로드</a> </div>
+  </div>
+</div>
+<!--//A_center-->
+</body>
+</html>

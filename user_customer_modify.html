@@ -1,0 +1,169 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>블루포트 발주시스템</title>
+<link type="text/css" rel="stylesheet" href="/Css/A_common.css" />
+<script type="text/javascript" src="/Scripts/jquery-1.6.2.min.js"></script>
+<script type="text/javascript" src="/Scripts/include.js"></script>
+</head>
+
+<body>
+<div id="A_head"></div>
+<div class="A_center">
+  <h3>고객 정보 수정</h3>
+  <h4>고객 정보</h4>
+  <div class="tWrap">
+    <table class="tableStyle">
+      <colgroup>
+        <col style="width:10%">
+        <col style="">
+        <col style="width:8%">
+        <col style="width:22%">
+        <col style="width:8%">
+        <col style="width:22%">
+      </colgroup>
+      <tr>
+        <th class="compulsory">회사명</th>
+        <td><input type="text" class="inp_txt" value="아무개" /></td>
+        <th>회사명 (EN)</th>
+        <td><input type="text" class="inp_txt" value="eng engn" /></td>
+        <th>본점/지점</th>
+        <td><input type="text" class="inp_txt" value="본점" /></td>
+      </tr>
+      <tr>
+        <th class="compulsory">사업자등록번호</th>
+        <td><input type="text" class="inp_txt" value="211-86-55016" /></td>
+        <th>G2B번호</th>
+        <td><input type="text" class="inp_txt" value="Z1235446" /></td>
+        <th>시장구분</th>
+        <td><select name="select2" class="select_style">
+          <option selected>전체</option>
+          <option>공공</option>
+          <option>교육</option>
+          <option>기업</option>
+        </select><select name="select2" class="select_style">
+          <option selected>전체</option>
+          <option>공사/공단</option>
+          <option>관공서</option>
+          <option>교육기관</option>
+          <option>군부대</option>
+          <option>대학교</option>
+          <option>시군구</option>
+          <option>중앙행정</option>
+          <option>초중고</option>
+          <option>기타</option>
+        </select></td>
+      </tr>
+      <tr>
+        <th>주소</th>
+        <td colspan="5"><input type="text" class="inp_txt2" value="132-031" /> <a href="#" class="btn_gray">우편번호</a> <input type="text" class="inp_txt" value="서울 강남구 논현동 70-8 백합빌딩 204호" /></td>
+      </tr>
+      <tr>
+        <th>주소(EN)</th>
+        <td colspan="5"><input type="text" class="inp_txt" value="eng eng eng" /></td>
+      </tr>
+      <tr>
+        <th>파일 첨부</th>
+        <td colspan="5"><input type="file" />
+          <img src="/Images/admin/ico_file.png" alt="첨부파일"><a href="#">test.xls</a><a href="#" class="btn_ico"><img src="/Images/admin/ico_delete.png" alt="삭제"></a> <img src="/Images/admin/ico_file.png" alt="첨부파일"><a href="#">test.xls</a><a href="#" class="btn_ico"><img src="/Images/admin/ico_delete.png" alt="삭제"></a></td>
+      </tr>
+    </table>
+  </div>
+  <div class="h4_style2 clfix pb5">
+   	<h4>담당자 정보</h4>
+        <div class="tit_right">
+        	<a href="#" class="btn_red">담당자 추가</a>
+        </div>
+    </div>
+  <div class="scrollFrame2 clfix">
+    <div class="rightarea">
+      <table class="tableStyle">
+        <colgroup>
+          <col style="width:10%">
+          <col style="width:10%">
+          <col style="width:15%">
+          <col style="width:10%">
+          <col style="width:15%">
+          <col style="width:10%">
+          <col style="width:10%">
+          <col style="width:10%">
+          <col style="width:10%">
+        </colgroup>
+        <tr>
+          <th>직무</th>
+          <th>담당자</th>
+          <th>담당자(EN)</th>
+          <th>부서</th>
+          <th>이메일</th>
+          <th>전화</th>
+          <th>휴대폰</th>
+          <th>팩스</th>
+          <th>수정/ 삭제</th>
+        </tr>
+        <tr>
+          <td class="ac"><select name="select3" class="select_style">
+            <option>구매담당</option>
+            <option>실무담당</option>
+          </select></td>
+          <td class="ac"><input type="text" class="inp_txt3" value=""/></td>
+          <td class="ac"><input type="text" class="inp_txt3" value=""/></td>
+          <td class="ac"><input type="text" class="inp_txt" value=""/></td>
+          <td class="ac"><input type="text" class="inp_txt3" value=""/></td>
+          <td class="ac"><input type="text" class="inp_txt3" value=""/></td>
+          <td class="ac"><input type="text" class="inp_txt3" value=""/></td>
+          <td class="ac"><input type="text" class="inp_txt3" value=""/></td>
+      <td class="ac"><a href="#" class="sbtn_gray2">수정</a> <a href="#" class="sbtn_gray2">삭제</a></td>
+        </tr>
+        <tr>
+          <td class="ac"><select name="select4" class="select_style">
+            <option>구매담당</option>
+            <option>실무담당</option>
+          </select></td>
+          <td class="ac"><input type="text" class="inp_txt3" value=""/></td>
+          <td class="ac"><input type="text" class="inp_txt3" value=""/></td>
+          <td class="ac"><input type="text" class="inp_txt" value=""/></td>
+          <td class="ac"><input type="text" class="inp_txt3" value=""/></td>
+          <td class="ac"><input type="text" class="inp_txt3" value=""/></td>
+          <td class="ac"><input type="text" class="inp_txt3" value=""/></td>
+          <td class="ac"><input type="text" class="inp_txt3" value=""/></td>
+      <td class="ac"><a href="#" class="sbtn_gray2">수정</a> <a href="#" class="sbtn_gray2">삭제</a></td>
+        </tr>
+        <tr>
+          <td class="ac"><select name="select" class="select_style">
+            <option>구매담당</option>
+            <option>실무담당</option>
+          </select></td>
+          <td class="ac"><input type="text" class="inp_txt3" value=""/></td>
+          <td class="ac"><input type="text" class="inp_txt3" value=""/></td>
+          <td class="ac"><input type="text" class="inp_txt" value=""/></td>
+          <td class="ac"><input type="text" class="inp_txt3" value=""/></td>
+          <td class="ac"><input type="text" class="inp_txt3" value=""/></td>
+          <td class="ac"><input type="text" class="inp_txt3" value=""/></td>
+          <td class="ac"><input type="text" class="inp_txt3" value=""/></td>
+      <td class="ac"><a href="#" class="sbtn_gray2">수정</a> <a href="#" class="sbtn_gray2">삭제</a></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <h4>고객 특이 사항</h4>
+  <div class="tWrap">
+    <table class="tableStyle">
+      <colgroup>
+        <col style="width:8%">
+        <col style="width:92%">
+      </colgroup>
+      <tr>
+        <th class="height_style2">특이사항</th>
+        <td class="height_style2"><textarea name="textarea" class="ta_style">- 줌특이해</textarea></td>
+      </tr>
+    </table>
+  </div>
+  <div class="btns clfix">
+    <div class="btns_l"> <a href="#" class="rbtn_line">닫기</a> <a href="#" class="rbtn_bg_red">고객 정보 삭제</a><!-- 파트너 및 고객정보 삭제는 ADMIN 권한--></div>
+    <div class="btns_r"> <a href="#" class="rbtn_bg">목록</a> <a href="#" class="rbtn_bg_red">수정완료</a> </div>
+  </div>
+</div>
+<!--//A_center-->
+</body>
+</html>

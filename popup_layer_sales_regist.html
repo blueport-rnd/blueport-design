@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>블루포트 발주시스템</title>
+<link type="text/css" rel="stylesheet" href="/Css/A_common.css" />
+</head>
+
+<body>
+<div class="A_center" class="A_Center_popup">
+  <h3>제품 입출고 등록</h3>  
+  <h4>제품 검색</h4>
+  <div class="tWrap">
+  	<table class="tableStyle">
+              <colgroup>
+                  <col style="width:12%">
+                  <col style="width:18%">
+                  <col style="width:12%">
+                  <col style="width:18%">
+                  <col style="width:12%">
+                  <col style="width:18%">
+                  <col style="">
+              </colgroup>
+              <tr>
+                <th>벤더(매입처)</th>
+                <td><input type="text" class="inp_txt" /></td>
+                <th>시장구분</th>
+                <td><select class="select_style">
+                	<option selected="selected">전체</option>
+              <option>공공</option>
+              <option>교육</option>
+              <option>기업</option>
+                </select></td>
+                <th>제품구분</th>
+                <td><input type="text" class="inp_txt" /></td>
+                <td rowspan="2" class="ac"><input type="button" value="검색" class="btn_search2"></td>
+              </tr>
+              <tr>
+                <th>제품명</th>
+                <td colspan="5"><input type="text" class="inp_txt3"/></td>
+              </tr>
+            </table>
+  </div>
+  <h4>제품 선택</h4>
+  <div class="scrollFrame2 clfix">
+      <div class="rightarea">
+  	<table class="tableStyle">
+              <colgroup>
+                  <col style="width:18%">
+                  <col style="width:10%">
+                  <col style="">
+                  <col style="width:15%">
+                  <col style="width:15%">
+                  <col style="width:8%">
+              </colgroup>
+              <tr>
+                <th>벤더(매입처)</th>
+                <th>구분</th>
+                <th>제품명</th>
+                <th>제품구분</th>
+                <th>매입가</th>
+                <th>선택</th>
+              </tr>
+              <tr>
+                <td class="ac">한글과 컴퓨터</td>
+                <td class="ac">공공</td>
+                <td class="ac">한글과컴퓨터 오피스 2007 행망용 ILA 2-3년차</td>
+                <td class="ac">라이선스</td>
+                <td class="ar">35,000</td>
+                <td class="ac"><input type="radio"  checked/></td>
+              </tr>
+              <tr>
+                <td class="ac">한글과 컴퓨터</td>
+                <td class="ac">공공</td>
+                <td class="ac">한글과컴퓨터 오피스 2010 행망용 ILA 2-3년차</td>
+                <td class="ac">라이선스</td>
+                <td class="ar">36,000</td>
+                <td class="ac"><input type="radio"/></td>
+              </tr>
+              <tr>
+                <td class="ac">한글과 컴퓨터</td>
+                <td class="ac">공공</td>
+                <td class="ac">한글과컴퓨터 오피스 2010 행망용 ILA 2-3년차</td>
+                <td class="ac">라이선스</td>
+                <td class="ar">36,000</td>
+                <td class="ac"><input type="radio"/></td>
+              </tr>
+              <tr>
+                <td class="ac">한글과 컴퓨터</td>
+                <td class="ac">공공</td>
+                <td class="ac">한글과컴퓨터 오피스 2010 행망용 ILA 2-3년차</td>
+                <td class="ac">라이선스</td>
+                <td class="ar">36,000</td>
+                <td class="ac"><input type="radio"/></td>
+              </tr>
+            </table>
+            </div>
+  </div> 
+  <h4>입출고 수량 입력</h4>
+  <div class="tWrap">
+  	<table class="tableStyle">
+              <colgroup>
+                  <col style="width:18%">
+                  <col style="width:32%">
+                  <col style="width:18%">
+                  <col style="width:32%">
+              </colgroup>
+              <tr>
+                <th>상태구분</th>
+                <td><input type="radio" checked/> 입고 <input type="radio"/> 출고</td>
+                <th>수량</th>
+                <td><input type="text" class="inp_txt2" value="30"/></td>
+              </tr>
+              <tr>
+                <th class="height_style2">비고</th>
+                <td colspan="3" class="height_style2"><textarea class="ta_style"></textarea></td>
+              </tr>
+            </table>
+  </div> 
+  <div class="btns clfix">
+    <a href="#" class="rbtn_line">닫기</a>
+    <a href="#" class="rbtn_bg">적용</a>
+  </div>
+</div>
+<!--//A_center-->
+</body>
+</html>

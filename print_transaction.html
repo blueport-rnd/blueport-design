@@ -1,0 +1,271 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+    <title>���� / ���� ������</title>
+    <link rel="stylesheet" href="/js/jquery-ui.min.css" type="text/css" />
+    <link rel="stylesheet" href="/Css/A_common.css" type="text/css" />
+    <script type="text/javascript" src="/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/js/jq-yd-common.js"></script>
+    <script type="text/javascript" src="/js/jquery-yessdata.js"></script>
+    <script type="text/javascript">
+        //<![CDATA[
+        function computeNPurchaseDetailPrdListSum() {
+            var frm = $("form[name='frmPurDet']");
+            var sngCostPriceSum = 0.0, sngSellPriceSum = 0.0, ele = null;
+
+            frm.find("input[name='prd_list_in_ysd_prd_won_total']").each(function (idx) {
+
+                var sngCount = parseFloat(frm.find("input[name='prd_list_in_ysd_count']:eq(" + idx + ")").val().replace(/,/g, ""));
+                var sngTmp = parseFloat(frm.find("input[name='prd_list_in_ysd_prd_won']:eq(" + idx + ")").val().replace(/,/g, ""));
+                var sngTmp_sell_won_total = parseFloat(frm.find("input[name='prd_list_ysd_prd_won_total']:eq(" + idx + ")").val().replace(/,/g, ""));
+                var ele = null;
+                if (!isNaN(sngCount) && !isNaN(sngTmp)) {
+                    frm.find("input[name='prd_list_in_ysd_prd_won']:eq(" + idx + ")").siblings("span").text(putComma(sngTmp + ""));
+                    sngTmp *= sngCount;
+                    sngSellPriceSum += sngTmp;
+                    $(this).val(sngTmp);
+                    $(this).siblings("span").text(putComma(sngTmp + ""));
+                    /*������*/
+                    //   if( sngTmp_sell_won_total > sngTmp){ //���� ����������� ����
+                    var w_rate = ((sngTmp / sngTmp_sell_won_total) * 100).toString();
+                    w_rate = Number(w_rate);
+                    w_rate = w_rate.toFixed(2);
+                    frm.find("input[name='prd_list_in_ysd_prd_won_percent']:eq(" + idx + ")").siblings("span").text(w_rate + "");
+                    // }
+                } else {
+                    $(this).val("");
+                    $(this).siblings("span").text("");
+                }
+
+            });
+
+
+            /*��Ʈ�� ������*/
+            if (frm.find("input[name='amount_psr']").length > 0) {
+                var amount_psr = parseFloat(frm.find("input[name='amount_psr']").val().replace(/,/g, ""));
+                var count_psr = parseFloat(frm.find("input[name='count_psr']").val().replace(/,/g, ""));
+                var amount_contract = parseFloat(frm.find("input[name='amount_contract']").val().replace(/,/g, ""));
+                var count_contract = parseFloat(frm.find("input[name='count_contract']").val().replace(/,/g, ""));
+                var amount_psr2 = parseFloat(frm.find("input[name='amount_psr2']").val().replace(/,/g, ""));
+                var count_psr2 = parseFloat(frm.find("input[name='count_psr2']").val().replace(/,/g, ""));
+
+                frm.find("input[name='amount_psr']").siblings("span").text(putComma((amount_psr * count_psr) + ""));
+                frm.find("input[name='amount_contract']").siblings("span").text(putComma((amount_contract * count_contract) + ""));
+                frm.find("input[name='amount_psr2']").siblings("span").text(putComma((amount_psr2 * count_psr2) + ""));
+
+                sngSellPriceSum += amount_psr + amount_contract + amount_psr2;  // �Ǹűݾ� ���ް���
+
+            }
+
+
+            ele = $("#prd_list_in_sum_sell_price"); // �Ǹűݾ� ���ް���
+            if (ele.length > 0) {
+                ele.html(putComma(Math.floor(sngSellPriceSum) + ""));
+            }
+
+            ele = $("#prd_list_in_sum_cost_price"); // ���� ���ް���
+            if (ele.length > 0) {
+                ele.html(putComma(Math.floor(sngCostPriceSum) + ""));
+            }
+
+            ele = $("#prd_list_in_sum_sell_price_vat"); // �Ǹűݾ� VAT
+
+            if (ele.length > 0) {
+                // ������ּ� 5247 ���϶��� �ΰ���ġ��(285985)�� ����������. �������� ���������� ó����
+                if (frm.find("input[name='ys_code']").val() == "5247") {
+                    ele.html(putComma(285985 + ""));
+                } else {
+                    ele.html(putComma(Math.floor(sngSellPriceSum * 0.1) + ""));
+                }
+            }
+
+            if (ele.length > 0) {
+                // ������ּ� 5247 ���϶��� �ΰ���ġ��(285985)�� ����������. �������� ���������� ó����
+                if (frm.find("input[name='ys_code']").val() == "5247") {
+                    ele.html(putComma(285985 + ""));
+                } else {
+                    ele.html(putComma(Math.floor(sngSellPriceSum * 0.1) + ""));
+                }
+            }
+            ele = $("#prd_list_in_sum_cost_price_vat"); // ���� VAT
+            if (ele.length > 0) {
+                ele.html(putComma(Math.floor(sngCostPriceSum * 0.1) + ""));
+            }
+
+
+            ele = $("#prd_list_in_sum_sell_price_add_vat"); // �Ǹűݾ� VAT���Աݾ�
+            if (ele.length > 0) {
+                ele.html(putComma(Math.floor(sngSellPriceSum * 1.1) + ""));
+            }
+
+            ele = $("#prd_list_in_sum_cost_price_add_vat"); // ���� VAT���Աݾ�
+            if (ele.length > 0) {
+                ele.html(putComma(Math.floor(sngCostPriceSum * 1.1) + ""));
+            }
+            /*������*/
+            var prd_list_sum_sell_price = $("#prd_list_sum_sell_price").html();  //�ǸŰ�
+            prd_list_sum_sell_price = parseInt(prd_list_sum_sell_price.replace(/,/g, ""));
+
+            var prd_list_in_sum_cost_price_vat = $("#prd_list_in_sum_sell_price").html(); //����
+            prd_list_in_sum_cost_price_vat = parseInt(prd_list_in_sum_cost_price_vat.replace(/,/g, ""));
+
+            //     if( prd_list_sum_sell_price > prd_list_in_sum_cost_price_vat){ //���� ����������� ����
+            var won_tot_rate = ((prd_list_in_sum_cost_price_vat / prd_list_sum_sell_price) * 100).toString();
+
+            won_tot_rate = Number(won_tot_rate);
+            won_tot_rate = won_tot_rate.toFixed(1);
+            $("#prd_list_tot_won_percent").html(won_tot_rate); //������
+
+            // }
+            var prd_list_tot_won_margin = putComma(Math.floor(prd_list_sum_sell_price - prd_list_in_sum_cost_price_vat) + "");
+
+            $("#prd_list_tot_won_margin").html(prd_list_tot_won_margin); //����
+
+
+        }
+
+        $(function () {
+            $(document).focus();
+
+            // ������ǰ �հ� ���
+            computeNSaleDetailPrdListSum();
+            // ������ǰ �հ� ���
+            computeNPurchaseDetailPrdListSum();
+
+            $("#prd_list_sum_sell_price_tot").html($("#prd_list_sum_sell_price").html());
+
+            $(".checkbox").click(function () {
+                $('.checkbox:input[type=checkbox]').not(this).prop("checked", false);
+            });
+
+
+        });
+
+        //]]>
+    </script>
+</head>
+<body>
+    <div class="prn_wrap">
+        <div style="text-align:center; font-size:20px; font-weight:bold;">�ŷ�������</div>
+        <div style="text-align:center; font-size:12px; padding:15px;">(���޹޴��� ������)</div>
+        <span>
+            <table class="print mb10">
+                <colgroup>
+                    <col width="30" />
+                    <col width="80" />
+                    <col width="80" />
+                    <col width="80" />
+                    <col width="80" />
+                    <col width="30" />
+                    <col width="80" />
+                    <col width="80" />
+                    <col width="80" />
+                    <col width="80" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th class="ac" rowspan="5">��<br /><br />��<br /><br />��</th>
+                        <th class="ac">��Ϲ�ȣ</th>
+                        <td class="ac" colspan="3">2118655017</td>
+                        <th class="ac" rowspan="5">��<br />��<br />��<br />��<br />��</th>
+                        <th class="ac">��Ϲ�ȣ</th>
+                        <td class="ac" colspan="3">2118655017</td>
+                    </tr>
+                    <tr>
+                        <th class="ac">�� ȣ </th>
+                        <td class="ac">(��)������Ʈ</td>
+                        <th class="ac">��ǥ��</th>
+                        <td class="ac">���翵(���λ���)</td>
+                        <th class="ac">�� ȣ</th>
+                        <td class="ac">(��)��������ũ</td>
+                        <th class="ac">��ǥ��</th>
+                        <td class="ac">���۷� (��)</td>
+                    </tr>
+                    <tr>
+                        <th class="ac">�� ��</th>
+                        <td class="ac" colspan="3">����Ư���� ������ ������� 120�� ������9��</td>
+                        <th class="ac">�� ��</th>
+                        <td class="ac" colspan="3">����Ư���� ������ �������62�� 24 �ؼۺ��� 2~4��</td>
+                    </tr>
+                    <tr>
+                        <th class="ac">�� ��</th>
+                        <td class="ac">����/������</td>
+                        <th class="ac">�� ��</th>
+                        <td class="ac">����Ʈ����߹װ���</td>
+                        <th class="ac">�� ��</th>
+                        <td class="ac">���� ���Ҹ�</td>
+                        <th class="ac">�� ��</th>
+                        <td class="ac">����Ʈ����߹��Ǹ�</td>
+                    </tr>
+                    <tr>
+                        <th class="ac">�����</th>
+                        <td class="ac">��������</td>
+                        <th class="ac">��ȭ��ȣ</th>
+                        <td class="ac">02-567-9169</td>
+                        <th class="ac">�����</th>
+                        <td class="ac">����</td>
+                        <th class="ac">��ȭ��ȣ</th>
+                        <td class="ac">02-559-2500</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="print mb10">
+                <colgroup>
+                    <col width="80" />
+                    <col width="80" />
+                    <col width="210" />
+                    <col width="50" />
+                    <col width="50" />
+                    <col width="80" />
+                    <col width="80" />
+                    <col width="70" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th colspan="3" scope="row">�հ�ݾ�(���ް���+����)</th>
+                        <td colspan="5" class="ac">�ϱ� �����̽��ȸ����� (\ 5,280,000)</td>
+                    </tr>
+                    <tr>
+                        <th class="ac" style="height:25px;">��¥</th>
+                        <th class="ac">������</th>
+                        <th class="ac">ǰ��</th>
+                        <th class="ac">�԰�</th>
+                        <th class="ac">����</th>
+                        <th class="ac">�ܰ�</th>
+                        <th class="ac">���ް���</th>
+                        <th class="ac">����</th>
+                    </tr>
+                    <tr>
+                        <td class="ac">2016-07-05</td>
+                        <td class="ac">����Ư����</td>
+                        <td class="al">���Ŀ��ǽ� ��/�� ���� �������� (���ΰ��� ������ ���񽺿�) (Server)</td>
+                        <td class="ac">ALA</td>
+                        <td class="ac">1</td>
+                        <td class="ar">4,800,000</td>
+                        <td class="ar">4,800,000</td>
+                        <td class="ar">480,000</td>
+                    </tr>
+                    <tr>
+                        <td class="ac">2016-07-05</td>
+                        <td class="ac">����Ư����</td>
+                        <td class="al">���Ŀ��ǽ� NEO ��/�� ��ġ�� DVD ����</td>
+                        <td class="ac">F/F</td>
+                        <td class="ac">1</td>
+                        <td class="ar">0</td>
+                        <td class="ar">0</td>
+                        <td class="ar">0</td>
+                    </tr>
+                    <tr>
+                        <th class="ac" colspan="6">�� ��</th>
+                        <td class="ar">4,800,000</td>
+                        <td class="ar">480,000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </span>
+    </div>
+</body>
+</html>

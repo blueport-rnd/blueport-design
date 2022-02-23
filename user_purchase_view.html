@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>블루포트 발주시스템</title>
+<link type="text/css" rel="stylesheet" href="/Css/A_common.css" />
+<script type="text/javascript" src="/Scripts/jquery-1.6.2.min.js"></script>
+<script type="text/javascript" src="/Scripts/include.js"></script>
+</head>
+
+<body>
+<div id="A_head"></div>
+<div class="A_center">
+  <h3>매입처 정보</h3>
+  <h4>매입처 정보</h4>
+  <div class="tWrap">
+    <table class="tableStyle">
+      <colgroup>
+        <col style="width:10%">
+        <col style="">
+        <col style="width:10%">
+        <col style="width:23%">
+        <col style="width:10%">
+        <col style="width:23%">
+      </colgroup>
+      <tr>
+        <th class="compulsory">회사명</th>
+        <td>한글과컴퓨터</td>
+        <th>홈페이지</th>
+        <td>http://www.abc.com</td>
+        <th>사업자등록번호</th>
+        <td>211-253-23025</td>
+      </tr>
+      <tr>
+        <th class="compulsory">지역</th>
+        <td>해외 / 미국<!-- 해외일 경우 input 생성되며, 나라명 입력 --></td>
+        <th>대표명</th>
+        <td>hong</td>
+        <th>대표전화</th>
+        <td>082-053-2045</td>
+      </tr>
+      <tr>
+        <th>주소</th>
+        <td colspan="5">-</td>
+      </tr>
+      <tr>
+        <th>주소(EN)</th>
+        <td colspan="5">america eng eng eng eng eng eng eng </td>
+      </tr>
+    </table>
+  </div>
+  <h4>매입 방식</h4>
+  <div class="tWrap">
+    <table class="tableStyle">
+      <colgroup>
+        <col style="width:10%">
+        <col style="">
+        <col style="width:10%">
+        <col style="width:23%">
+        <col style="width:10%">
+        <col style="width:23%">
+      </colgroup>
+      <tr>
+        <th class="compulsory">매입 방식</th>
+        <td colspan="5">기타 / 30일<!-- 매입일 기준 : 매입관리에서 지급일 확인 가능하게 셋팅 / 기타 : input 생성하여 일수 입력--></td>
+      </tr>
+      <tr>
+        <th>은행명</th>
+        <td>america bank</td>
+        <th>계좌번호</th>
+        <td>215-5563-5234</td>
+        <th>예금주</th>
+        <td>hong</td>
+      </tr>
+      <tr>
+        <th>파일 첨부</th>
+        <td colspan="5"><img src="/Images/admin/ico_file.png" alt="첨부파일"><a href="#">test.xls</a><img src="/Images/admin/ico_file.png" alt="첨부파일"><a href="#">test.xls</a></td>
+      </tr>
+      <tr>
+        <th class="height_style2">매입 방법</th>
+        <td colspan="5" class="height_style2"><textarea class="ta_style">이건, 누구한테 어떻게 어떤 방식으로 해서 주문해야 하는 건입니다.
+        </textarea></td>
+      </tr>
+    </table>
+  </div>
+   	<h4>담당자 정보</h4>
+  <div class="scrollFrame2 clfix">
+    <div class="rightarea">
+      <table class="tableStyle">
+        <colgroup>
+          <col style="width:10%">
+          <col style="width:10%">
+          <col style="width:10%">
+          <col style="">
+          <col style="width:10%">
+          <col style="width:10%">
+          <col style="width:10%">
+        </colgroup>
+        <tr>
+          <th>직무</th>
+          <th>담당자</th>
+          <th>부서</th>
+          <th>이메일</th>
+          <th>전화</th>
+          <th>휴대폰</th>
+          <th>팩스</th>
+        </tr>
+        <tr>
+          <td class="ac">구매담당</td>
+          <td class="ac">홍길동</td>
+          <td class="ac">영업팀</td>
+          <td class="ac">abc@abc.co.kr</td>
+          <td class="ac">02-000-0000</td>
+          <td class="ac">02-0000-0000</td>
+          <td class="ac">02-000-0000</td>
+      </tr>
+        <tr>
+          <td class="ac">구매담당</td>
+          <td class="ac">홍길동</td>
+          <td class="ac">영업팀</td>
+          <td class="ac">abc@abc.co.kr</td>
+          <td class="ac">02-000-0000</td>
+          <td class="ac">02-0000-0000</td>
+          <td class="ac">02-000-0000</td>
+      </tr>
+        <tr>
+          <td class="ac">구매담당</td>
+          <td class="ac">홍길동</td>
+          <td class="ac">영업팀</td>
+          <td class="ac">abc@abc.co.kr</td>
+          <td class="ac">02-000-0000</td>
+          <td class="ac">02-0000-0000</td>
+          <td class="ac">02-000-0000</td>
+      </tr>
+      </table>
+    </div>
+  </div>
+  <h4>매입처 특이 사항</h4>
+  <div class="tWrap">
+    <table class="tableStyle">
+      <colgroup>
+        <col style="width:10%">
+        <col style="width:90%">
+      </colgroup>
+      <tr>
+        <th class="height_style2">특이사항</th>
+        <td class="height_style2"><textarea name="textarea" class="ta_style">- 줌특이해</textarea></td>
+      </tr>
+    </table>
+  </div>
+  <div class="btns clfix">
+    <div class="btns_l"> <a href="#" class="rbtn_line">닫기</a> <a href="#" class="rbtn_bg_red">삭제</a></div>
+    <div class="btns_r"> <a href="#" class="rbtn_bg">목록</a> <a href="#" class="rbtn_bg_red">수정</a> </div>
+  </div>
+</div>
+<!--//A_center-->
+</body>
+</html>

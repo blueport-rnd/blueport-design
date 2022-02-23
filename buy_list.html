@@ -1,0 +1,278 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>블루포트 발주시스템</title>
+    <link type="text/css" rel="stylesheet" href="/Css/A_common.css" />
+    <script type="text/javascript" src="/Scripts/jquery-1.6.2.min.js"></script>
+    <script type="text/javascript" src="/Scripts/include.js"></script>
+</head>
+
+<body>
+    <div id="A_head"></div>
+    <div class="A_center">
+        <h3>매입 관리</h3>
+        <h4>검색</h4>
+        <div class="tWrap">
+            <table class="tableStyle">
+                <colgroup>
+                    <col style="width:7%">
+                    <col style="width:12%">
+                    <col style="width:7%">
+                    <col style="width:12%">
+                    <col style="width:7%">
+                    <col style="width:12%">
+                    <col style="width:7%">
+                    <col style="width:12%">
+                    <col style="width:7%">
+                    <col style="width:12%">
+                    <col>
+                </colgroup>
+                <tr>
+                    <th>매입번호</th>
+                    <td><input type="text" class="inp_txt" /></td>
+                    <th>승인번호</th>
+                    <td>
+                        <input type="text" class="inp_txt5" />
+                        -
+                        <input type="text" class="inp_txt5" />
+                    </td>
+                    <th>매입 PO</th>
+                    <td><input type="text" class="inp_txt" /></td>
+                    <th>Invoice</th>
+                    <td><input type="text" class="inp_txt" /></td>
+                    <th>매입 계산서</th>
+                    <td>
+                        <select name="select" class="select_style">
+                            <option selected>전체</option>
+                            <option>완료</option>
+                            <option>미완료</option>
+                        </select>
+                    </td>
+                    <td rowspan="3" class="ac"><input type="button" value="검색" class="btn_search2"></td>
+                </tr>
+                <tr>
+                    <th>
+                        매입처
+                    </th>
+                    <td><input type="text" class="inp_txt" /></td>
+                    <th>벤더</th>
+                    <td><input type="text" class="inp_txt" /></td>
+                    <th>제품명</th>
+                    <td><input type="text" class="inp_txt" /></td>
+                    <th>매입총액</th>
+                    <td><input type="text" class="inp_txt" /></td>
+                    <th>결재 조건</th>
+                    <td>
+                        <select name="select4" class="select_style">
+                            <option selected>전체</option>
+                            <option>선입금</option>
+                            <option>익월말 현금</option>
+                            <option>당월말 현금</option>
+                            <option>카드</option>
+                            <option>기타</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>결재 완료</th>
+                    <td>
+                        <select name="select3" class="select_style">
+                            <option selected>전체</option>
+                            <option>완료</option>
+                            <option>미완료</option>
+                        </select>
+                    </td>
+                    <th>검색기간</th>
+                    <td colspan="3">
+                        <select name="select2" class="select_style fl">
+                            <option selected>-</option>
+                            <option>발주일</option>
+                            <option>매입 계산서</option>
+                            <option>결재 예정일</option>
+                            <option>결재 완료일</option>
+                        </select>
+                        <input type="text" class="input_cal" name="SearchDateStartDate" />
+                        <span class="txt_style1"> ~ </span>
+                        <input type="text" class="input_cal" name="SearchDateStartDate" />
+                    </td>
+                    <th>매입정보</th>
+                    <td colspan="3"><input type="text" class="inp_txt" /></td>
+                </tr>
+            </table>
+        </div>
+        <div class="h4_style2 clfix pb5">
+            <h4>매입 목록</h4>
+            <div class="tit_right">
+                <div class="txt_total pr5">· Total : 100건</div>
+            </div>
+        </div>
+        <div class="tWrap">
+            <table class="tableStyle">
+                <colgroup>
+                    <col style="width:60px">
+                    <col style="width:5%">
+                    <col style="width:5%">
+                    <col style="width:6%">
+                    <col style="width:6%">
+                    <col style="width:160px">
+                    <col style="width:7%">
+                    <col style="">
+                    <col style="width:6%">
+                    <col style="width:4%">
+                    <col style="width:5%">
+                    <col style="width:160px">
+                    <col style="width:70px">
+                </colgroup>
+                <tr>
+                    <th>매입번호</th>
+                    <th>승인번호</th>
+                    <th>매입일</th>
+                    <th>매입 PO</th>
+                    <th>Invoice</th>
+                    <th> 매입 계산서</th>
+                    <th>매입처</th>
+                    <th>
+                        <table class="inTable">
+                            <colgroup>
+                                <col style="width:12%;">
+                                <col style="">
+                                <col style="width:10%;">
+                                <col style="width:17%;">
+                            </colgroup>
+                            <tr>
+                                <th class="bb0">벤더</th>
+                                <th class="bb0">제품명</th>
+                                <th class="bb0">수량</th>
+                                <th class="bb0 br0">매입금액</th>
+                            </tr>
+                        </table>
+                    </th>
+                    <th>매입총액</th>
+                    <th>결재조건</th>
+                    <th>결재 예정일</th>
+                    <th>결재 완료일</th>
+                    <th>매출정보</th>
+                </tr>
+                <tr class="listStyle1" onMouseOver="this.style.backgroundColor='#e3f3f5';" onMouseOut="this.style.backgroundColor='#f5f4f2';">
+                    <td class="ac">2</td>
+                    <td class="ac">160612001</td>
+                    <td class="ac">2016-05-01</td>
+                    <td class="ac">PYW16050901</td>
+                    <td class="ac">-</td>
+                    <td>
+                        <input type="text" class="input_cal" name="SearchDateStartDate" />
+                        <a href="#" class="sbtn_gray2">완료</a>
+                    </td>
+                    <td class="ac">다우기술</td>
+                    <td class="p0 bb0">
+                        <table class="inTable">
+                            <colgroup>
+                                <col style="width:12%;">
+                                <col style="">
+                                <col style="width:10%;">
+                                <col style="width:17%;">
+                            </colgroup>
+                            <tr>
+                                <td class="ac">Autodesk</td>
+                                <td class="al">AutoCAD 1year</td>
+                                <td class="ar">35</td>
+                                <td class="ar br0">4,725,000</td>
+                            </tr>
+                            <tr>
+                                <td class="ac">Autodesk</td>
+                                <td class="al"> AutoCAD 1year</td>
+                                <td class="ar">35</td>
+                                <td class="ar br0">4,725,000</td>
+                            </tr>
+                            <tr>
+                                <td class="ac">Autodesk</td>
+                                <td class="al"> AutoCAD 1year</td>
+                                <td class="ar">35</td>
+                                <td class="ar br0">4,725,000</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td class="ac">4,725,000<br>(5,197,500)</td>
+                    <td class="ac">익월말 현금</td>
+                    <td class="ac">2016-05-01</td>
+                    <td>
+                        <input type="text" class="input_cal" name="SearchDateStartDate" />
+                        <a href="#" class="sbtn_gray2">완료</a>
+                    </td>
+                    <td class="ac"><a href="#" class="btn_ico_txt">매출정보</a></td>
+                </tr>
+                <tr class="listStyle2" onMouseOver="this.style.backgroundColor='#e3f3f5';" onMouseOut="this.style.backgroundColor='#fff';">
+                    <td class="ac">1</td>
+                    <td class="ac">120612001</td>
+                    <td class="ac">2016-05-01</td>
+                    <td class="ac">PYW16050902 </td>
+                    <td class="ac">PYW16050901</td>
+                    <td>
+                        <input type="text" class="input_cal" name="SearchDateStartDate2" />
+                        <a href="#" class="sbtn_gray2">완료</a>
+                    </td>
+                    <td class="ac">한글과컴퓨터</td>
+                    <td class="p0 bb0">
+                        <table class="inTable">
+                            <colgroup>
+                                <col style="width:12%;">
+                                <col style="">
+                                <col style="width:10%;">
+                                <col style="width:17%;">
+                            </colgroup>
+                            <tr>
+                                <td class="ac">Autodesk</td>
+                                <td class="al"> AutoCAD 1year</td>
+                                <td class="ar">35</td>
+                                <td class="ar br0">4,725,000</td>
+                            </tr>
+                            <tr>
+                                <td class="ac">Autodesk</td>
+                                <td class="al"> AutoCAD 1year</td>
+                                <td class="ar">35</td>
+                                <td class="ar br0">4,725,000</td>
+                            </tr>
+                            <tr>
+                                <td class="ac">Autodesk</td>
+                                <td class="al"> AutoCAD 1year</td>
+                                <td class="ar">35</td>
+                                <td class="ar br0">4,725,000</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td class="ac">4,725,000<br>(5,197,500)</td>
+                    <td class="ac">익월말 현금</td>
+                    <td class="ac">2016-05-01</td>
+                    <td>
+                        <input type="text" class="input_cal" name="SearchDateStartDate" />
+                        <a href="#" class="sbtn_gray2">완료</a>
+                    </td>
+                    <td class="ac"><a href="#" class="btn_ico_txt">매출정보</a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="page">
+            <a href="#" class="pageArr1"><img src="/Images/admin/page_first.png" alt="맨처음"></a> <a href="#" class="pageArr1"><img src="/Images/admin/page_pre.png" alt="이전"></a>
+            <ul>
+                <li><a href="#" class="pageOn">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">6</a></li>
+                <li><a href="#">7</a></li>
+                <li><a href="#">8</a></li>
+                <li><a href="#">9</a></li>
+                <li><a href="#">10</a></li>
+            </ul>
+            <a href="#" class="pageArr2"><img src="/Images/admin/page_next.png" alt="다음"></a> <a href="#" class="pageArr2"><img src="/Images/admin/page_last.png" alt="맨마지막"></a>
+        </div>
+        <div class="btns clfix">
+            <div class="btns_l"> <a href="#" class="rbtn_down"><img src="/Images/admin/ico_excel.png" alt="엑셀파일"> 다운로드</a> </div>
+            <div class="btns_r"> <a href="#" class="rbtn_bg_red">고객 등록</a> </div>
+        </div>
+    </div>
+    <!--//A_center-->
+</body>
+</html>

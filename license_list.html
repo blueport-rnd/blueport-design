@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>블루포트 발주시스템</title>
+<link type="text/css" rel="stylesheet" href="/Css/A_common.css" />
+<script type="text/javascript" src="/Scripts/jquery-1.6.2.min.js"></script>
+<script type="text/javascript" src="/Scripts/include.js"></script>
+</head>
+
+<body>
+<div id="A_head"></div>
+<div class="A_center">
+  <h3>라이선스 관리</h3>
+  <h4>검색</h4>
+  <div class="tWrap">
+    <table class="tableStyle">
+      <colgroup>
+      <col style="width:7%">
+      <col style="width:12%">
+      <col style="width:7%">
+      <col style="width:12%">
+      <col style="width:7%">
+      <col style="width:12%">
+      <col style="width:7%">
+      <col>
+      <col style="width:7%">
+      </colgroup>
+      <tr>
+        <th>라이선스 구분</th>
+        <td><select name="select" class="select_style">
+            <option selected>전체</option>
+            <option>임대 라이선스</option>
+            <option>영구 라이선스</option>
+          </select></td>
+        <th>벤더</th>
+        <td><input type="text" class="inp_txt" /></td>
+        <th>제품명</th>
+        <td><input type="text" class="inp_txt" /></td>
+        <th>기간</th>
+        <td><select name="select2" class="select_style fl">
+            <option selected>-</option>
+            <option>발주승인일</option>
+            <option>라이선스 종료일</option>
+          </select>
+          <input type="text" class="input_cal" name="SearchDateStartDate" />
+          <span class="txt_style1"> ~ </span>
+          <input type="text" class="input_cal" name="SearchDateStartDate" /></td>
+        <td rowspan="2" class="ac"><input type="button" value="검색" class="btn_search3"></td>
+      </tr>
+      <tr>
+        <th>승인번호</th>
+        <td><input type="text" class="inp_txt" /></td>
+        <th>고객명</th>
+        <td><input type="text" class="inp_txt" /></td>
+        <th>라이선스 키</th>
+        <td><input type="text" class="inp_txt" /></td>
+        <th>기타 정보</th>
+        <td><input type="text" class="inp_txt" /></td>
+      </tr>
+    </table>
+  </div>
+  <div class="h4_style2 clfix pb5">
+    <h4>라이선스 목록</h4>
+    <div class="tit_right">
+      <div class="txt_total pr5">· Total : 100건</div></div>
+  </div>
+  <div class="tWrap">
+    <table class="tableStyle">
+      <colgroup>
+      <col style="width:35px">
+      <col style="width:4%">
+      <col style="width:5%">
+      <col style="width:10%">
+      <col style="">
+      <col style="width:8%;">
+      <col style="width:5%;">
+      <col style="width:15%;">
+      <col style="width:7%;">
+      <col style="width:10%;">
+      <col style="width:7%;">
+      </colgroup>
+      <tr>
+        <th><input type="checkbox"></th>
+        <th>구분</th>
+        <th>승인번호</th>
+        <th>고객명</th>
+        <th>제품명</th>
+        <th>제품구분</th>
+        <th>수량</th>
+        <th>라이선스 키</th>
+        <th>라이선스 파일</th>
+        <th>라이선스 기간</th>
+        <th>상태</th>
+      </tr>
+      <tr class="listStyle1" onMouseOver="this.style.backgroundColor='#e3f3f5';" onMouseOut="this.style.backgroundColor='#f5f4f2';">
+        <td class="ac"><input type="checkbox"></td>
+        <td class="ac">영구</td>
+        <td class="ac">120612001</td>
+        <td class="ac">투지스인터랙티브</td>
+        <td class="al">한컴오피스 한/글 방과후학교용 1년임대 Level A</td>
+        <td class="ac">라이선스</td>
+        <td class="ac">45</td>
+        <td class="ac">235664564-23564657</td>
+        <td class="ac"><a href="#"><img src="/Images/admin/ico_file2.png" alt="라이선스"></a></td>
+        <td class="al">2016-05-11~</td>
+        <td class="ac">영구</td>
+      </tr>
+      <tr class="listStyle2" onMouseOver="this.style.backgroundColor='#e3f3f5';" onMouseOut="this.style.backgroundColor='#fff';">
+        <td class="ac"><input type="checkbox"></td>
+        <td class="ac">영구</td>
+        <td class="ac">120612001</td>
+        <td class="ac">투지스인터랙티브</td>
+        <td class="al">한컴오피스 한/글 방과후학교용 1년임대 Level A</td>
+        <td class="ac">라이선스</td>
+        <td class="ac">45</td>
+        <td class="ac">235664564-23564657</td>
+        <td class="ac"><img src="/Images/admin/ico_file2_off.png" alt="라이선스"></td>
+        <td class="al">2016-05-11~2016-08-30</td>
+        <td class="ac">미종료</td>
+      </tr>
+      <tr class="listStyle1" onMouseOver="this.style.backgroundColor='#e3f3f5';" onMouseOut="this.style.backgroundColor='#f5f4f2';">
+        <td class="ac"><input type="checkbox"></td>
+        <td class="ac">영구</td>
+        <td class="ac">120612001</td>
+        <td class="ac">투지스인터랙티브</td>
+        <td class="al">한컴오피스 한/글 방과후학교용 1년임대 Level A</td>
+        <td class="ac">라이선스</td>
+        <td class="ac">45</td>
+        <td class="ac">235664564-23564657</td>
+        <td class="ac"><a href="#"><img src="/Images/admin/ico_file2.png" alt="라이선스"></a></td>
+        <td class="al">2016-05-11~2016-05-13</td>
+        <td class="ac">종료</td>
+      </tr>
+    </table>
+  </div>
+  <div class="page"> <a href="#" class="pageArr1"><img src="/Images/admin/page_first.png" alt="맨처음"></a> <a href="#" class="pageArr1"><img src="/Images/admin/page_pre.png" alt="이전"></a>
+    <ul>
+      <li><a href="#" class="pageOn">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#">4</a></li>
+      <li><a href="#">5</a></li>
+      <li><a href="#">6</a></li>
+      <li><a href="#">7</a></li>
+      <li><a href="#">8</a></li>
+      <li><a href="#">9</a></li>
+      <li><a href="#">10</a></li>
+    </ul>
+    <a href="#" class="pageArr2"><img src="/Images/admin/page_next.png" alt="다음"></a> <a href="#" class="pageArr2"><img src="/Images/admin/page_last.png" alt="맨마지막"></a> </div>
+  <div class="btns clfix">
+    <div class="btns_l"> <a href="#" class="rbtn_down"><img src="/Images/admin/ico_excel.png" alt="엑셀파일"> 다운로드</a> </div>
+    <!-- 요청 반려 시 작성중으로 이동 / 파트너 발주건도 작성중으로 이동[반려사유 포함] -->
+    <div class="btns_r"> 
+      <!--<a href="#" class="rbtn_line">저장</a>--> <a href="#" class="rbtn_bg_red">삭제</a> </div>
+  </div>
+</div>
+<!--//A_center-->
+</body>
+</html>

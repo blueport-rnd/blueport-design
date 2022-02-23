@@ -1,0 +1,190 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>블루포트 발주시스템</title>
+<link type="text/css" rel="stylesheet" href="/Css/A_common.css" />
+<script type="text/javascript" src="/Scripts/jquery-1.6.2.min.js"></script>
+<script type="text/javascript" src="/Scripts/include.js"></script>
+</head>
+
+<body>
+<div id="A_head"></div>
+<div class="A_center">
+  <h3>매입처 담당자 목록</h3>
+  <h4>검색</h4>
+  <div class="tWrap">
+    <table class="tableStyle">
+      <colgroup>
+      <col style="width:7%">
+      <col style="width:12%">
+      <col style="width:7%">
+      <col style="width:12%">
+      <col style="width:7%">
+      <col style="width:12%">
+      <col style="width:7%">
+      <col style="width:12%">
+      <col style="width:7%">
+      <col style="width:12%">
+      <col style="width:5%">
+      </colgroup>
+      <tr>
+        <th>회사명</th>
+        <td><input type="text" class="inp_txt" /></td>
+        <th>사업자등록번호</th>
+        <td><input type="text" class="inp_txt" /></td>
+        <th>지역</th>
+        <td><select name="select2" class="select_style">
+          <option selected>전체</option>
+          <option>국내</option>
+          <option>해외</option>
+        </select><input type="text" class="inp_txt2" /></td>
+        <th>매입 방식</th>
+        <td><select name="select3" class="select_style">
+          <option selected>전체</option>
+          <option>선입금</option>
+          <option>익월말 현금</option>
+          <option>당월말 현금</option>
+          <option>카드</option>
+          <option>기타</option>
+        </select></td>
+        <th>특이사항</th>
+        <td><input type="text" class="inp_txt" /></td>
+        <td rowspan="2" class="ac"><input type="button" value="검색" class="btn_search3"></td>
+      </tr>
+      <tr>
+        <th>직무</th>
+        <td><select name="select3" class="select_style">
+          <option selected>전체</option>
+          <option>발주담당</option>
+          <option>대표이사</option>
+          <option>실무담당</option>
+          <option>구매담당</option>
+        </select></td>
+        <th>담당자</th>
+        <td><input type="text" class="inp_txt" /></td>
+        <th>이메일</th>
+        <td><input type="text" class="inp_txt" /></td>
+        <th>전화</th>
+        <td><input type="text" class="inp_txt" /></td>
+        <th>휴대폰</th>
+        <td><input type="text" class="inp_txt" /></td>
+      </tr>
+    </table>
+  </div>
+  <div class="h4_style2 clfix pb5">
+    <h4>매입처 담당자 목록</h4>
+    <div class="tit_right">
+      <div class="txt_total pr5">· Total : 100건</div>
+    </div>
+  </div>
+  <div class="tWrap">
+    <table class="tableStyle">
+      <colgroup>
+        <col style="">
+        <col style="width:12%">
+        <col style="width:10%">
+        <col style="width:8%">
+        <col style="width:8%">
+        <col style="width:5%">
+        <col style="width:7%">
+        <col style="width:7%">
+        <col style="width:7%">
+        <col style="width:7%">
+        <col style="width:4%">
+        <col style="width:5%">
+      </colgroup>
+      <tr>
+        <th>회사명</th>
+        <th>홈페이지</th>
+        <th>사업자등록번호</th>
+        <th>지역</th>
+        <th>매입 방식</th>
+        <th>직무</th>
+        <th>담당자</th>
+        <th> 이메일</th>
+        <th>전화</th>
+        <th>휴대폰</th>
+        <th>특이 사항</th>
+        <th>매입내역</th>
+      </tr>
+      <tr class="listStyle1" onMouseOver="this.style.backgroundColor='#e3f3f5';" onMouseOut="this.style.backgroundColor='#f5f4f2';">
+        <td class="ac">abc company</td>
+        <td class="ac">http://www.abc.com</td>
+        <td class="ac">-</td>
+        <td class="ac">해외 / 미국</td>
+        <td class="ac">선입금</td>
+        <td class="ac">구매담당</td>
+        <td class="ac">홍길동</td>
+        <td class="ac">abc@abc.co.kr</td>
+        <td class="ac">000-0000-0000</td>
+        <td class="ac">000-0000-0000</td>
+        <td class="ac"><a href="#" class="btn_ico2"><img src="/Images/admin/ico_document.png" alt="비고"></a></td>
+        <td class="ac"><a href="#" class="btn_ico_txt">매입내역</a></td>
+      </tr>
+      <tr class="listStyle2" onMouseOver="this.style.backgroundColor='#e3f3f5';" onMouseOut="this.style.backgroundColor='#fff';">
+        <td class="ac">다우기술</td>
+        <td class="ac">http://www.dau.com</td>
+        <td class="ac">416-88-88888</td>
+        <td class="ac">국내</td>
+        <td class="ac">기타 / 30</td>
+        <td class="ac">발주담당</td>
+        <td class="ac">홍길동</td>
+        <td class="ac">abc@abc.co.kr</td>
+        <td class="ac">000-0000-0000</td>
+        <td class="ac">000-0000-0000</td>
+        <td class="ac"><a href="#" class="btn_ico2"><img src="/Images/admin/ico_document.png" alt="비고"></a></td>
+        <td class="ac"><a href="#" class="btn_ico_txt">매입내역</a></td>
+      </tr>
+      <tr class="listStyle1" onMouseOver="this.style.backgroundColor='#e3f3f5';" onMouseOut="this.style.backgroundColor='#f5f4f2';">
+        <td class="ac">한글과컴퓨터</td>
+        <td class="ac">http://www.hancom.com</td>
+        <td class="ac">416-88-88888</td>
+        <td class="ac">국내</td>
+        <td class="ac">익월말 현금</td>
+        <td class="ac">구매담당</td>
+        <td class="ac">홍길동</td>
+        <td class="ac">abc@abc.co.kr</td>
+        <td class="ac">000-0000-0000</td>
+        <td class="ac">000-0000-0000</td>
+        <td class="ac"><a href="#" class="btn_ico2"><img src="/Images/admin/ico_document.png" alt="비고"></a></td>
+        <td class="ac"><a href="#" class="btn_ico_txt">매입내역</a></td>
+      </tr>
+      <tr class="listStyle2" onMouseOver="this.style.backgroundColor='#e3f3f5';" onMouseOut="this.style.backgroundColor='#fff';">
+        <td class="ac">def Company</td>
+        <td class="ac">http://www.def.com</td>
+        <td class="ac">-</td>
+        <td class="ac">해외 / 일본</td>
+        <td class="ac">카드</td>
+        <td class="ac">대표이사</td>
+        <td class="ac">홍길동</td>
+        <td class="ac">abc@abc.co.kr</td>
+        <td class="ac">000-0000-0000</td>
+        <td class="ac">000-0000-0000</td>
+        <td class="ac"><a href="#" class="btn_ico2"><img src="/Images/admin/ico_document.png" alt="비고"></a></td>
+        <td class="ac"><a href="#" class="btn_ico_txt">매입내역</a></td>
+      </tr>
+    </table>
+  </div>
+  <div class="page"> <a href="#" class="pageArr1"><img src="/Images/admin/page_first.png" alt="맨처음"></a> <a href="#" class="pageArr1"><img src="/Images/admin/page_pre.png" alt="이전"></a>
+    <ul>
+      <li><a href="#" class="pageOn">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#">4</a></li>
+      <li><a href="#">5</a></li>
+      <li><a href="#">6</a></li>
+      <li><a href="#">7</a></li>
+      <li><a href="#">8</a></li>
+      <li><a href="#">9</a></li>
+      <li><a href="#">10</a></li>
+    </ul>
+    <a href="#" class="pageArr2"><img src="/Images/admin/page_next.png" alt="다음"></a> <a href="#" class="pageArr2"><img src="/Images/admin/page_last.png" alt="맨마지막"></a> </div>
+  <div class="btns clfix">
+    <div class="btns_l"> <a href="#" class="rbtn_down"><img src="/Images/admin/ico_excel.png" alt="엑셀파일"> 다운로드</a> </div>
+    <div class="btns_r"> <a href="#" class="rbtn_bg_red">신규등록</a> </div>
+  </div>
+</div>
+<!--//A_center-->
+</body>
+</html>

@@ -1,0 +1,407 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>블루포트 발주시스템</title>
+<link type="text/css" rel="stylesheet" href="/Css/A_common.css" />
+<script type="text/javascript" src="/Scripts/jquery-1.6.2.min.js"></script>
+<script type="text/javascript" src="/Scripts/include.js"></script>
+</head>
+
+<body>
+<div id="A_head"></div>
+<div class="A_center">
+  <h3>MRO 발주 등록</h3>
+  <h4>수주 구분</h4>
+  <div class="tWrap">
+    <table class="tableStyle">
+      <colgroup>
+        <col style="width:5%">
+        <col style="width:17%">
+        <col style="width:5%">
+        <col style="width:17%">
+        <col style="width:5%">
+        <col style="width:17%">
+        <col style="width:7%">
+        <col style="">
+      </colgroup>
+      <tr>
+        <th>수주구분</th>
+        <td><select name="select" class="select_style">
+          <option selected>MRO</option>
+        </select>
+          <select name="select3" class="select_style">
+            <option selected>상품</option>
+            <option>정기</option>
+            <option>기타</option>
+        </select></td>
+        <th>작성자</th>
+        <td>영업지원팀/이호정</td>
+        <th>영업담당자</th>
+        <td><select name="select2" class="select_style">
+          <option selected>-</option>
+          <option>권혁철</option>
+          <option>전종휘</option>
+          <option>성종화</option>
+          <option>정현도</option>
+        </select></td>
+        <th>매출결제관리</th>
+        <td><select name="select2" class="select_style  fl">
+          <option selected>선입금</option>
+          <option>익월말 현금</option>
+          <option>당월말 현금</option>
+          <option>카드</option>
+          <option>기타</option>
+        </select>
+          <!-- 선입금, 카드시 당일 일정 / 익월말, 당월말 은 자동 일정 입력 / 기타는 수기 입력 -->
+          <input type="text" class="input_cal" name="SearchDateStartDate" /></td>
+      </tr>
+    </table>
+  </div>
+  <div class="h4_style2 clfix pb5">
+    <h4>발주 파트너 정보</h4>
+    <div class="tit_right">
+      <div class="search">
+        <select class="select_style">
+          <option>파트너명</option>
+          <option>사업자등록번호</option>
+        </select>
+        <input type="text" class="inp_txt" />
+        <a href="#" class="sbtn_gray">검색</a> </div>
+      <a href="#" class="btn_blue">신규 파트너 등록</a> </div>
+  </div>
+  <div class="tWrap pb15">
+    <table class="tableStyle">
+      <colgroup>
+      <col style="width:">
+      <col style="width:10%">
+      <col style="width:10%">
+      <col style="width:10%">
+      <col style="width:20%">
+      <col style="width:10%">
+      </colgroup>
+      <tr>
+        <th>파트너명</th>
+        <th>사업자등록번호</th>
+        <th>담당자</th>
+        <th>전화</th>
+        <th>휴대폰</th>
+        <th>이메일</th>
+      </tr>
+      <tr>
+        <td class="ac">해솔데이타</td>
+        <td class="ac">2118655017</td>
+        <td class="ac">홍영주</td>
+        <td class="ac">02-111-1111</td>
+        <td class="ac">010-111-1111</td>
+        <td class="ac">aaa@bbb.ccc</td>
+      </tr>
+    </table>
+  </div>
+  <h4>주문 특이 사항</h4>
+  <div class="tWrap">
+    <table class="tableStyle">
+      <colgroup>
+      <col style="width:8%">
+      <col style="width:92%">
+      </colgroup>
+      <tr>
+        <th class="height_style2">비고</th>
+        <td class="height_style2"><textarea class="ta_style"></textarea></td>
+      </tr>
+    </table>
+  </div>
+  <div class="h4_style2 clfix pb5">
+    <h4>고객 정보</h4>
+    <div class="tit_right">
+      <div class="search">
+        <select class="select_style">
+          <option>고객회사명</option>
+          <option>사업자등록번호</option>
+          <option>나라장터 번호</option>
+        </select>
+        <input type="text" class="inp_txt" />
+        <a href="#" class="sbtn_gray">검색</a> </div>
+      <a href="#" class="btn_blue">신규 고객 등록</a> </div>
+  </div>
+  <div class="tWrap">
+    <table class="tableStyle">
+      <colgroup>
+      <col style="width:10%">
+      <col style="width:10%">
+      <col style="width:10%">
+      <col style="width:35%">
+      <col style="width:35%">
+      </colgroup>
+      <tr>
+        <th>사업자등록번호</th>
+        <th>나라장터 번호</th>
+        <th>시장 구분</th>
+        <th>고객명</th>
+        <th>고객명(E)</th>
+      </tr>
+      <tr>
+        <td class="ac">6108269457</td>
+        <td class="ac">Z020472</td>
+        <td class="ac">공공/중앙부처</td>
+        <td class="ac">울주시니어클럽</td>
+        <td class="ac">ULJU CLUB</td>
+      </tr>
+    </table>
+    <table class="tableStyle mt3">
+      <colgroup>
+      <col style="width:10%">
+      <col style="width:45%">
+      <col style="width:45%">
+      </colgroup>
+      <tr>
+        <th>우편번호</th>
+        <th>주소</th>
+        <th>주소(E)</th>
+      </tr>
+      <tr>
+        <td class="ac">44946</td>
+        <td class="ac">울산광역시 울주군 언양읍 동문길 51-0</td>
+        <td class="ac">51-0. Dongmun-gil, Eonyang-eup, Ulju-gun, Ulsan, Korea</td>
+      </tr>
+    </table>
+  </div>
+  <div class="h4_style2 clfix pb5">
+    <div class="tit_right"> <a href="#" class="btn_blue">담당자 추가</a> </div>
+  </div>
+  <div class="tWrap">
+    <table class="tableStyle">
+      <colgroup>
+      <col style="width:10%">
+      <col style="width:10%">
+      <col style="width:10%">
+      <col style="width:10%">
+      <col style="width:10%">
+      <col style="width:10%">
+      <col style="width:10%">
+      <col style="width:20%">
+      <col style="width:10%">
+      </colgroup>
+      <tr>
+        <th>직무</th>
+        <th>부서</th>
+        <th>담당자</th>
+        <th>담당자(E)</th>
+        <th>전화</th>
+        <th>휴대폰</th>
+        <th>팩스</th>
+        <th>이메일</th>
+        <th>삭제</th>
+      </tr>
+      <tr>
+        <td class="ac"><select class="select_style">
+            <option>구매담당</option>
+            <option>실무담당</option>
+          </select></td>
+        <td class="ac">-</td>
+        <td class="ac">권태민</td>
+        <td class="ac">-</td>
+        <td class="ac">052-229-9482</td>
+        <td class="ac">-</td>
+        <td class="ac">052-229-9499</td>
+        <td class="ac">-</td>
+        <td class="ac"><a href="#" class="btn_ico"><img src="/Images/admin/ico_delete.png" alt="삭제"></a></td>
+      </tr>
+    </table>
+  </div>
+  <div class="h4_style2 clfix pb5">
+    <h4>제품 정보</h4>
+    <div class="tit_right"><a href="javascript:pop('popup_layer_product.html','width=900,height=750,scrollbars=yes,status=no,resize=no')" class="btn_blue">제품 선택</a></div>
+  </div>
+  <div class="tWrap">
+    <table class="tableStyle">
+      <colgroup>
+        <col style="width:5%">
+        <col style="">
+        <col style="width:5%">
+        <col style="width:5%">
+        <col style="width:5%">
+        <col style="width:5%">
+        <col style="width:5%">
+        <col style="width:5%">
+        <col style="width:5%">
+        <col style="width:5%">
+        <col style="width:5%">
+        <col style="width:5%">
+        <col style="width:5%">
+        <col style="width:3%">
+        <col style="width:3%">
+        <col style="width:3%">
+        <col style="width:3%">
+      </colgroup>
+      <tr>
+        <th rowspan="2">벤더</th>
+        <th rowspan="2">제품명</th>
+        <th rowspan="2">구분</th>
+        <th rowspan="2">수량</th>
+        <th colspan="2" class="bg_green">매입</th>
+        <th colspan="2" class="bg_yellow">매출</th>
+        <th colspan="2" class="bg_orange">자체 마진</th>
+        <th rowspan="2">라이선스</th>
+        <th rowspan="2">매입관리</th>
+        <th rowspan="2">비고</th>
+        <th rowspan="2">삭제</th>
+      </tr>
+      <tr>
+        <th class="bg_green">단가</th>
+        <th class="bg_green">총액</th>
+        <th class="bg_yellow">단가</th>
+        <th class="bg_yellow">총액</th>
+        <th class="bg_orange">마진율</th>
+        <th class="bg_orange">금액</th>
+      </tr>
+      <tr>
+        <td class="ac">한글과컴퓨터</td>
+        <td class="ac">한컴오피스 NEO, 10user 이상</td>
+        <td class="ac">라이선스</td>
+        <td class="ac">10</td>
+        <td class="ac">1,000</td>
+        <td class="ac">10,000</td>
+        <td class="ac bg_gray">2,000</td>
+        <td class="ac bg_gray">20,000</td>
+        <td class="ac bg_gray">38%</td>
+        <td class="ac bg_gray">7,600</td>
+        <td class="ac"><a href="#" class="btn_ico2"><img src="/Images/admin/ico_document.png" alt="라이선스"></a></td>
+        <td class="ac"><a href="#" class="btn_ico2"><img src="/Images/admin/ico_document.png" alt="매입관리"></a></td>
+        <td class="ac"><a href="#" class="btn_ico"><img src="/Images/admin/ico_document_gray.png" alt="비고내용"></a></td>
+        <td class="ac"><a href="#" class="btn_ico"><img src="/Images/admin/ico_delete.png" alt="삭제"></a></td>
+      </tr>
+      <tr>
+        <td class="ac">한글과컴퓨터</td>
+        <td class="ac">한컴오피스 NEO, 10user 이상</td>
+        <td class="ac">라이선스</td>
+        <td class="ac">10</td>
+        <td class="ac">2,000</td>
+        <td class="ac">20,000</td>
+        <td class="ac bg_gray">3,000</td>
+        <td class="ac bg_gray">30,000</td>
+        <td class="ac bg_gray">21.4 %</td>
+        <td class="ac bg_gray">6,400</td>
+        <td class="ac"><a href="#" class="btn_ico2"><img src="/Images/admin/ico_document.png" alt="라이선스"></a></td>
+        <td class="ac"><a href="#" class="btn_ico2"><img src="/Images/admin/ico_document.png" alt="매입관리"></a></td>
+        <td class="ac"><a href="#" class="btn_ico"><img src="/Images/admin/ico_document_gray.png" alt="비고내용"></a></td>
+        <td class="ac"><a href="#" class="btn_ico"><img src="/Images/admin/ico_delete.png" alt="삭제"></a></td>
+      </tr>
+      <tr>
+        <td class="ac">한글과컴퓨터</td>
+        <td class="ac">한컴오피스 NEO, 10user 이상</td>
+        <td class="ac">라이선스</td>
+        <td class="ac">10</td>
+        <td class="ac">3,000</td>
+        <td class="ac">30,000</td>
+        <td class="ac bg_gray">4,000</td>
+        <td class="ac bg_gray">40,000</td>
+        <td class="ac bg_gray">13 %</td>
+        <td class="ac bg_gray">5,200</td>
+        <td class="ac"><a href="#" class="btn_ico2"><img src="/Images/admin/ico_document.png" alt="라이선스"></a></td>
+        <td class="ac"><a href="#" class="btn_ico2"><img src="/Images/admin/ico_document.png" alt="매입관리"></a></td>
+        <td class="ac"><a href="#" class="btn_ico"><img src="/Images/admin/ico_document_gray.png" alt="비고내용"></a></td>
+        <td class="ac"><a href="#" class="btn_ico"><img src="/Images/admin/ico_delete.png" alt="삭제"></a></td>
+      </tr>
+    </table>
+  </div>
+  <div class="tWrap">
+    <table class="summary">
+      <colgroup>
+      <col style="width:80px">
+      <col style="width:80px">
+      <col style="width:80px">
+      <col style="width:80px">
+      <col style="width:80px">
+      <col style="width:80px">
+      <col style="width:80px">
+      <col style="width:80px">
+      <col style="width:80px">
+      </colgroup>
+      <tr>
+        <th rowspan="2" class="bg_green">매입 총액</th>
+        <td class="bg_gray">별도가</td>
+        <td>13,400</td>
+        <th rowspan="2" class="bg_yellow">매출 총액</th>
+        <td class="bg_gray">별도가</td>
+        <td>26,800</td>
+        <th rowspan="2" class="bg_orange">마진 총액<br>
+          50.00%</th>
+        <td class="bg_gray">별도가</td>
+        <td>13,400</td>
+      </tr>
+      <tr>
+        <td class="bg_gray">포함가</td>
+        <td>14,740</td>
+        <td class="bg_gray">포함가</td>
+        <td>29,480</td>
+        <td class="bg_gray">포함가</td>
+        <td>14,740</td>
+      </tr>
+    </table>
+  </div>
+  <h4>파일 첨부</h4>
+  <div class="tWrap">
+    <table class="tableStyle">
+      <colgroup>
+      <col style="width:8%">
+      <col style="width:92%">
+      </colgroup>
+      <tr>
+        <th>파일첨부</th>
+        <td><input type="file" />
+          <img src="/Images/admin/ico_file.png" alt="첨부파일"><a href="#">test.xls</a><a href="#" class="btn_ico"><img src="/Images/admin/ico_delete.png" alt="삭제"></a> <img src="/Images/admin/ico_file.png" alt="첨부파일"><a href="#">test.xls</a><a href="#" class="btn_ico"><img src="/Images/admin/ico_delete.png" alt="삭제"></a></td>
+      </tr>
+    </table>
+  </div>
+  <h4>배송처 정보</h4>
+  <div class="tWrap">
+    <table class="tableStyle">
+      <colgroup>
+      <col style="width:8%">
+      <col style="width:42%">
+      <col style="width:8%">
+      <col style="width:42%">
+      </colgroup>
+      <tr>
+        <th>배송처 정보</th>
+        <td><input type="radio"  checked />
+          고객
+          <input type="radio" />
+          수주 파트너
+          <input type="radio" />
+          신규 </td>
+        <th>운송장 정보</th>
+        <td><input type="radio" checked />
+          택배 (발주 확인 완료 후 생성)
+          <input type="radio" />
+          퀵서비스
+          <input type="radio" />
+          직납</td>
+      </tr>
+      <tr>
+        <th>배송처/담당자</th>
+        <td><input type="text" class="inp_txt2" />
+          /
+          <input type="text" class="inp_txt2" /></td>
+        <th>부서 / 연락처</th>
+        <td><input type="text" class="inp_txt2" />
+          /
+          <input type="text" class="inp_txt2" /></td>
+      </tr>
+      <tr>
+        <th>주소</th>
+        <td colspan="3"><input type="text" class="inp_txt2" />
+          <a href="#" class="btn_gray">우편번호</a>
+          <input type="text" class="inp_txt" /></td>
+      </tr>
+    </table>
+  </div>
+  <div class="btns clfix">
+    <div class="btns_l"> <a href="#" class="rbtn_line">닫기</a> </div>
+    <div class="btns_r"> <a href="#" class="rbtn_line">저장</a> <a href="#" class="rbtn_bg">발주 요청</a> <a href="#" class="rbtn_bg_red">발주 승인</a> </div>
+  </div>
+</div>
+<!--//A_center-->
+</body>
+</html>

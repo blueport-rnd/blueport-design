@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>블루포트 발주시스템</title>
+<link type="text/css" rel="stylesheet" href="/Css/A_common.css" />
+</head>
+
+<body>
+<div class="A_center" class="A_Center_popup">
+  <h3>라이선스 관리</h3>
+  <h4>라이선스 등록</h4>
+  <div class="tWrap">
+    <table class="tableStyle">
+      <colgroup>
+      <col style="width:15%">
+      <col style="width:85%">
+      </colgroup>
+      <tr>
+        <th>고객명</th>
+        <td>투지스인터렉티브</td>
+      </tr>
+      <tr>
+        <th>제품명</th>
+        <td>한컴오피스 한/글 방과후학교용 1년임대 Level A</td>
+      </tr>
+      <tr>
+        <th>라이선스 구분</th>
+        <td><select name="select2" class="select_style fl">
+            <option selected>영구 라이선스</option>
+            <option>임대 라이선스</option>
+          </select>
+          <!-- 영구일 경우 뒤에 날짜는 미지정 /임대일경우 앞에 날짜 선택시 뒤의 날짜는 기본 1년으로 셋팅 후 수정 가능 -->
+          <input type="text" class="input_cal" name="SearchDateStartDate" />
+          <span class="txt_style1"> ~ </span>
+          <input type="text" class="input_cal" name="SearchDateStartDate" /></td>
+      </tr>
+      <tr>
+        <th>License Number</th>
+        <td class="height_style2"><textarea name="textarea2" class="ta_style"></textarea></td>
+      </tr>
+      <tr>
+        <th>기타 정보</th>
+        <td class="height_style2"><textarea name="textarea2" class="ta_style"></textarea></td>
+      </tr>
+      <tr>
+        <th>파일 첨부</th>
+        <td><input type="file" />
+          <img src="/Images/admin/ico_file.png" alt="첨부파일"><a href="#">test.xls</a><a href="#" class="btn_ico"><img src="/Images/admin/ico_delete.png" alt="삭제"></a></td>
+      </tr>
+    </table>
+  </div>
+  <div class="btns clfix"> <a href="#" class="rbtn_line">닫기</a> <a href="#" class="rbtn_bg">등록</a> </div>
+</div>
+<!--//A_center-->
+</body>
+</html>

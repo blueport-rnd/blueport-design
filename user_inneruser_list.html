@@ -1,0 +1,202 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>블루포트 발주시스템</title>
+<link type="text/css" rel="stylesheet" href="/Css/A_common.css" />
+<script type="text/javascript" src="/Scripts/jquery-1.6.2.min.js"></script>
+<script type="text/javascript" src="/Scripts/include.js"></script>
+</head>
+
+<body>
+<div id="A_head"></div>
+<div class="A_center">
+  <h3>블루포트 회사/사용자 관리</h3>
+  <h4>회사정보</h4>
+  <div class="tWrap">
+  <table class="tableStyle">
+        <colgroup>
+          <col style="width:6%">
+          <col style="width:10%">
+          <col style="width:6%">
+          <col style="width:10%">
+          <col style="width:6%">
+          <col style="width:10%">
+          <col style="width:6%">
+          <col style="width:10%">
+          <col style="width:6%">
+          <col style="width:10%">
+          <col style="width:6%">
+          <col style="width:10%">
+          <col>
+          </colgroup>
+        <tr>
+          <th>회사명</th>
+          <td><input type="text" class="inp_txt" /></td>
+          <th>회사명(EN)</th>
+          <td><input type="text" class="inp_txt" /></td>
+          <th>대표번호</th>
+          <td><input type="text" class="inp_txt" /></td>
+          <th>대표번호(EN)</th>
+          <td><input type="text" class="inp_txt" /></td>
+          <th>팩스번호</th>
+          <td><input type="text" class="inp_txt" /></td>
+          <th>팩스번호(EN)</th>
+          <td><input type="text" class="inp_txt" /></td>
+        </tr>
+        <tr>
+          <th>사업자등록번호</th>
+          <td><input type="text" class="inp_txt" /></td>
+          <th>업종/업태</th>
+          <td><input type="text" class="inp_txt7" />/<input type="text" class="inp_txt7" /></td>
+          <th>주소</th>
+          <td colspan="3"><input type="text" class="inp_txt" /></td>
+          <th>주소(EN)</th>
+          <td colspan="3"><input type="text" class="inp_txt" /></td>
+        </tr>
+        <tr>
+          <th>공공담당자 선택</th>
+          <td><select name="select2" class="select_style">
+            <option selected>-</option>
+            <option>leto</option>
+            <option>bylee</option>
+          </select></td>
+          <th>교육담당자 선택</th>
+          <td><select name="select" class="select_style">
+            <option selected>-</option>
+            <option>leto</option>
+            <option>bylee</option>
+          </select></td>
+          <th>외산담당자 선택</th>
+          <td><select name="select3" class="select_style">
+            <option selected>-</option>
+            <option>leto</option>
+            <option>bylee</option>
+          </select></td>
+          <th>솔루션담당자 선
+            택</th>
+          <td><select name="select4" class="select_style">
+            <option selected>-</option>
+            <option>leto</option>
+            <option>bylee</option>
+          </select></td>
+          <th>용역담당자 선택</th>
+          <td><select name="select5" class="select_style">
+            <option selected>-</option>
+            <option>leto</option>
+            <option>bylee</option>
+          </select></td>
+          <th>MRO 담당자 선택</th>
+          <td><select name="select6" class="select_style">
+            <option selected>-</option>
+            <option>leto</option>
+            <option>bylee</option>
+          </select></td>
+        </tr>
+        <tr>
+          <th>공공 대표이메일</th>
+          <td><input type="text" class="inp_txt" /></td>
+          <th>교육 대표이메일</th>
+          <td><input type="text" class="inp_txt" /></td>
+          <th>외산 대표이메일</th>
+          <td><input type="text" class="inp_txt" /></td>
+          <th>솔루션  대표이메일</th>
+          <td><input type="text" class="inp_txt" /></td>
+          <th>용역  대표이메일</th>
+          <td><input type="text" class="inp_txt" /></td>
+          <th>MRO 대표이메일</th>
+          <td><input type="text" class="inp_txt" /></td>
+        </tr>
+      </table>
+  </div>
+  <div class="h4_style2 clfix pb5">
+    <h4>담당자 목록</h4>
+    <div class="tit_right">
+      <div class="txt_total pr5">· Total : 100건</div></div>
+  </div>
+  <div class="tWrap">
+    <table class="tableStyle">
+      <colgroup>
+        <col style="width:9%">
+        <col style="width:9%">
+        <col style="width:9%">
+        <col style="width:9%">
+        <col style="width:9%">
+        <col style="width:9%">
+        <col style="width:9%">
+        <col style="width:9%">
+        <col style="width:9%">
+        <col style="width:10%">
+        <col style="width:9%">
+      </colgroup>
+      <tr>
+        <th>부서</th>
+        <th>이름</th>
+        <th>이름(EN)</th>
+        <th>직책</th>
+        <th> 전화번호</th>
+        <th> 휴대폰</th>
+        <th>팩스</th>
+        <th> 이메일</th>
+        <th>권한</th>
+        <th>아이디</th>
+        <th>수정/삭재</th>
+      </tr>
+      <tr class="listStyle1" onMouseOver="this.style.backgroundColor='#e3f3f5';" onMouseOut="this.style.backgroundColor='#f5f4f2';">
+        <td class="ac">영업지원팀</td>
+        <td class="ac">이호정</td>
+        <td class="ac">lee Ho Jung</td>
+        <td class="ac">부장</td>
+        <td class="ac">000-0000-0000</td>
+        <td class="ac">000-0000-0000</td>
+        <td class="ac">000-0000-0000</td>
+        <td class="ac">leot@blueport.co.kr</td>
+        <td class="ac">admin</td>
+        <td class="ac">leto</td>
+        <td class="ac"><a href="#" class="btn_ico_txt">수정</a> <a href="#" class="btn_ico_txt">삭제</a></td>
+      </tr>
+      <tr class="listStyle2" onMouseOver="this.style.backgroundColor='#e3f3f5';" onMouseOut="this.style.backgroundColor='#fff';">
+        <td class="ac">영업지원팀</td>
+        <td class="ac">이호정</td>
+        <td class="ac">lee Ho Jung</td>
+        <td class="ac">부장</td>
+        <td class="ac">000-0000-0000</td>
+        <td class="ac">000-0000-0000</td>
+        <td class="ac">000-0000-0000</td>
+        <td class="ac">leot@blueport.co.kr</td>
+        <td class="ac">admin</td>
+        <td class="ac">leto</td>
+        <td class="ac"><a href="#" class="btn_ico_txt">수정</a> <a href="#" class="btn_ico_txt">삭제</a></td>
+      </tr>
+    </table>
+  </div>
+  <div class="page">
+  	<a href="#" class="pageArr1"><img src="/Images/admin/page_first.png" alt="맨처음"></a>
+  	<a href="#" class="pageArr1"><img src="/Images/admin/page_pre.png" alt="이전"></a>
+    <ul>
+      <li><a href="#" class="pageOn">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#">4</a></li>
+      <li><a href="#">5</a></li>
+      <li><a href="#">6</a></li>
+      <li><a href="#">7</a></li>
+      <li><a href="#">8</a></li>
+      <li><a href="#">9</a></li>
+      <li><a href="#">10</a></li>
+    </ul>
+  	<a href="#" class="pageArr2"><img src="/Images/admin/page_next.png" alt="다음"></a>
+  	<a href="#" class="pageArr2"><img src="/Images/admin/page_last.png" alt="맨마지막"></a>
+  </div>
+  <div class="btns clfix">
+        <div class="btns_r">
+            <a href="#" class="rbtn_bg_red">사용자 등록</a>
+        </div>
+        <div class="btns_r">
+            <a href="#" class="rbtn_bg_red">회사정보 저장</a>
+        </div>
+  </div>
+</div>
+<!--//A_center-->
+</body>
+</html>

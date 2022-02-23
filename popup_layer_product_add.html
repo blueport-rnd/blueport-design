@@ -1,0 +1,180 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>블루포트 발주시스템</title>
+<link type="text/css" rel="stylesheet" href="/Css/A_common.css" />
+</head>
+
+<body>
+<div class="A_center" class="A_Center_popup">
+  <h3>제품 추가</h3>
+  <div class="searchList mb20">
+  	<select class="select_style">
+                <option selected>벤더 회사명</option>
+                <option>사업자등록번호</option>
+    </select>
+    <input type="text" class="inp_txt4">
+    <a href="#" class="sbtn_gray">검색</a>
+  </div>
+  <h4>벤더(매입처) 선택</h4>
+  <div class="scrollFrame2 clfix">
+    <div class="rightarea">
+      <table class="tableStyle">
+        <colgroup>
+          <col style="width:4%">
+          <col style="width:12%">
+          <col style="width:12%">
+          <col style="width:10%">
+        <col style="width:12%">
+        <col style="width:12%">
+          <col style="">
+        </colgroup>
+        <tr>
+          <th>선택</th>
+          <th>회사명</th>
+          <th>사업자등록번호</th>
+          <th>대표명</th>
+          <th>대표전화</th>
+          <th>대표이메일</th>
+          <th>비고</th>
+        </tr>
+        <tr>
+          <td class="ac"><input type="radio" checked/></td>
+          <td class="ac">한글과컴퓨터</td>
+          <td class="ac">123-45-67890</td>
+          <td class="ac">홍길동</td>
+          <td class="ac">02-0000-0000</td>
+          <td class="ac">abc@abc.com</td>
+          <td class="ac">한컴오피스 관련 업체</td>
+        </tr>
+        <tr>
+          <td class="ac"><input type="radio" /></td>
+          <td class="ac">디프소프트</td>
+          <td class="ac">123-45-67890</td>
+          <td class="ac">홍길동</td>
+          <td class="ac">02-0000-0000</td>
+          <td class="ac">abc@abc.com</td>
+          <td class="ac">WBlock 5.00 관련 개발 업체 (제품 추가시 관리자 컨펌)</td>
+        </tr>
+        <tr>
+          <td class="ac"><input type="radio" /></td>
+          <td class="ac">블랙포트</td>
+          <td class="ac">123-45-67890</td>
+          <td class="ac">홍길동</td>
+          <td class="ac">02-0000-0000</td>
+          <td class="ac">abc@abc.com</td>
+          <td class="ac">보안업체</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <h4>제품 정보</h4>
+  <div class="tWrap">
+    <table class="tableStyle">
+      <colgroup>
+      <col style="width:10%">
+      <col style="width:23%">
+      <col style="width:10%">
+      <col style="">
+      <col style="width:10%">
+      <col style="width:23%">
+      </colgroup>
+      <tr>
+        <th>벤더(매입처)</th>
+        <td>한글과컴퓨터</td>
+        <th class="compulsory">시장구분</th>
+        <td><label>
+        <input type="checkbox" name="CheckboxGroup1" value="체크 상자" id="CheckboxGroup1_0">
+        공공</label>
+      <label>
+        <input type="checkbox" name="CheckboxGroup1_" value="체크 상자" id="CheckboxGroup1_1">
+        교육</label>
+      <label>
+        <input type="checkbox" name="CheckboxGroup1_" value="체크 상자" id="CheckboxGroup1_2">
+        기업</label>
+      <label>
+        <input type="checkbox" name="CheckboxGroup1_" value="체크 상자" id="CheckboxGroup1_3">
+        MRO</label></td>
+        <th class="compulsory">제품구분</th>
+        <td><input type="text" class="inp_txt" /></td>
+      </tr>
+      <tr>
+        <th>물품식별번호</th>
+        <td><input type="text" class="inp_txt" /></td>
+        <th>제작사 품번</th>
+        <td><input type="text" class="inp_txt" /></td>
+        <th>판매여부</th>
+        <td><label>
+        <input name="CheckboxGroup1" type="checkbox" id="CheckboxGroup2_0" value="체크 상자" checked>
+        판매</label>
+      <label>
+        <input name="CheckboxGroup1_" type="checkbox" id="CheckboxGroup2_1" value="체크 상자" checked>
+        외부보임
+        <input name="CheckboxGroup2_" type="checkbox" id="CheckboxGroup2_2" value="체크 상자" checked>
+가격 보임</label></td>
+      </tr>
+      <tr>
+        <th class="compulsory">제품명</th>
+        <td colspan="3"><input type="text" class="inp_txt" /></td>
+        <th>매입연동</th>
+        <td><label>
+        <input name="CheckboxGroup1" type="checkbox" id="CheckboxGroup2_0" value="체크 상자" checked>
+        매입 자동 연동</label></td>
+      </tr>
+      <tr>
+        <th>제품메모</th>
+        <td colspan="5" class="height_style2">
+          <textarea name="textarea" class="ta_style"></textarea></td>
+      </tr>
+    </table>
+  </div>
+  <h4>제품 가격 및 수수료</h4>
+  <div class="tWrap">
+    <table class="tableStyle">
+      <colgroup>
+      <col style="width:10%">
+      <col style="width:15%">
+      <col style="width:10%">
+      <col style="width:15%">
+      <col style="width:10%">
+      <col style="width:15%">
+      <col style="width:10%">
+      <col style="width:15%">
+      </colgroup>
+      <tr>
+        <th>소비자가</th>
+        <td><input type="text" class="inp_txt" /></td>
+        <th>매입단가</th>
+        <td><input type="text" class="inp_txt" /></td>
+        <th>환율[$]</th>
+        <td><input type="text" class="inp_txt" value="1" /></td>
+        <th>매출단가</th>
+        <td><input type="text" class="inp_txt" /></td>
+      </tr>
+      <tr>
+        <th>PSR</th>
+        <td><input type="text" class="inp_txt6" />
+          <a href="#" class="pageArr2"><img src="/Images/admin/page_last.png" alt="맨마지막" class="Arr1"></a>
+        <input type="text" class="inp_txt7" /></td>
+        <th>수주</th>
+        <td><input type="text" class="inp_txt6" />
+          <a href="#" class="pageArr2"><img src="/Images/admin/page_last.png" alt="맨마지막" class="Arr1"></a>
+        <input type="text" class="inp_txt7" /></td>
+        <th>수주2</th>
+        <td><input type="text" class="inp_txt6" />
+          <a href="#" class="pageArr2"><img src="/Images/admin/page_last.png" alt="맨마지막" class="Arr1"></a>
+        <input type="text" class="inp_txt7" /></td>
+        <th>마진단가</th>
+        <td><input type="text" class="inp_txt" /></td>
+      </tr>
+    </table>
+  </div>
+  <div class="btns clfix">
+    <div class="btns_l"> <a href="#" class="rbtn_line">닫기</a> </div>
+    <a href="#" class="rbtn_bg">등록</a> <a href="#" class="rbtn_bg">등록 계속</a>
+  </div>
+</div>
+<!--//A_center-->
+</body>
+</html>

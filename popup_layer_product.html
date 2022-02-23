@@ -1,0 +1,225 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>블루포트 발주시스템</title>
+<link type="text/css" rel="stylesheet" href="/Css/A_common.css" />
+</head>
+
+<body>
+<div class="A_center" class="A_Center_popup">
+  <h3>제품 선택</h3>
+  <h4>제품 검색</h4>
+  <div class="tWrap">
+    <table class="tableStyle">
+      <colgroup>
+      <col style="width:12%">
+      <col style="width:18%">
+      <col style="width:12%">
+      <col style="width:18%">
+      <col style="width:12%">
+      <col style="width:18%">
+      <col style="">
+      </colgroup>
+      <tr>
+        <th>벤더(매입처)</th>
+        <td><input type="text" class="inp_txt" /></td>
+        <th>시장구분</th>
+        <td><select class="select_style">
+            <option selected="selected">전체</option>
+            <option>소프트웨어</option>
+            <option>공공</option>
+            <option>교육</option>
+            <option>기업</option>
+            <option>MRO</option>
+          </select></td>
+        <th>제품구분</th>
+        <td><input type="text" class="inp_txt" /></td>
+        <td rowspan="2" class="ac"><input type="button" value="검색" class="btn_search3"></td>
+      </tr>
+      <tr>
+        <th>제품명</th>
+        <td colspan="5"><input type="text" class="inp_txt3"/></td>
+      </tr>
+    </table>
+  </div>
+  <h4>제품 선택</h4>
+  <div class="scrollFrame2 clfix">
+    <div class="rightarea">
+      <table class="tableStyle">
+        <colgroup>
+        <col style="width:18%">
+        <col style="width:10%">
+        <col style="">
+        <col style="width:15%">
+        <col style="width:15%">
+        <col style="width:8%">
+        </colgroup>
+        <tr>
+          <th>벤더(매입처)</th>
+          <th>시장구분</th>
+          <th>제품명</th>
+          <th>제품구분</th>
+          <th>매입가</th>
+          <th>선택</th>
+        </tr>
+        <tr>
+          <td class="ac">한글과 컴퓨터</td>
+          <td class="ac">공공/교육</td>
+          <td class="al">한글과컴퓨터 오피스 2007 행망용 ILA 2-3년차</td>
+          <td class="ac">라이선스</td>
+          <td class="ar">35,000</td>
+          <td class="ac"><input type="radio"  checked/></td>
+        </tr>
+        <tr>
+          <td class="ac">한글과 컴퓨터</td>
+          <td class="ac">교육/기업</td>
+          <td class="al">한글과컴퓨터 오피스 2010 행망용 ILA 2-3년차</td>
+          <td class="ac">라이선스</td>
+          <td class="ar">36,000</td>
+          <td class="ac"><input type="radio"/></td>
+        </tr>
+        <tr>
+          <td class="ac">한글과 컴퓨터</td>
+          <td class="ac">공공</td>
+          <td class="al">한글과컴퓨터 오피스 2010 행망용 ILA 2-3년차</td>
+          <td class="ac">라이선스</td>
+          <td class="ar">36,000</td>
+          <td class="ac"><input type="radio"/></td>
+        </tr>
+        <tr>
+          <td class="ac">한글과 컴퓨터</td>
+          <td class="ac">교육</td>
+          <td class="al">한글과컴퓨터 오피스 2010 행망용 ILA 2-3년차</td>
+          <td class="ac">라이선스</td>
+          <td class="ar">36,000</td>
+          <td class="ac"><input type="radio"/></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <h4>제품 정보</h4>
+  <div class="tWrap">
+    <table class="tableStyle">
+      <colgroup>
+      <col style="width:10%">
+      <col style="width:13%">
+      <col style="width:7%">
+      <col style="width:10%">
+      <col style="width:7%">
+      <col style="">
+      <col style="width:7%">
+      <col style="width:10%">
+      </colgroup>
+      <tr>
+        <th>벤더(매입처)</th>
+        <td>한글과컴퓨터</td>
+        <th>시장구분</th>
+        <td>공공</td>
+        <th>제품명</th>
+        <td>한글과컴퓨터 오피스 2007 행망용 ILA 2~3년차</td>
+        <th>제품구분</th>
+        <td>라이선스</td>
+      </tr>
+      <tr>
+        <th>물품식별번호</th>
+        <td>21053265</td>
+        <th>제작사 품번</th>
+        <td>P203521</td>
+        <th>제품메모</th>
+        <td colspan="3">상기 제품은 조달청을 통하여 나오는 발주건만 해당되는 제품임</td>
+      </tr>
+    </table>
+  </div>
+  <h4>제품 가격 및 수수료</h4>
+  <div class="tWrap">
+    <table class="tableStyle">
+      <colgroup>
+      <col style="width:10%">
+      <col style="width:15%">
+      <col style="width:10%">
+      <col style="width:15%">
+      <col style="width:10%">
+      <col style="width:15%">
+      <col style="width:10%">
+      <col style="width:15%">
+      </colgroup>
+      <tr>
+        <th>소비자가</th>
+        <td><input type="text" class="inp_txt" value="2,000" /></td>
+        <th>매입단가</th>
+        <td><input type="text" class="inp_txt" value="1,500" /></td>
+        <th>환율[$]</th>
+        <td><input type="text" class="inp_txt" value="1" /></td>
+        <th>매출단가</th>
+        <td><input type="text" class="inp_txt" value="1,800" /></td>
+      </tr>
+      <tr>
+        <th>PSR</th>
+        <td><input type="text" class="inp_txt6" value="10" />
+          <a href="#" class="pageArr2"><img src="/Images/admin/page_last.png" alt="맨마지막" class="Arr1"></a>
+          <input type="text" class="inp_txt7" value="180" /></td>
+        <th>수주</th>
+        <td><input type="text" class="inp_txt6" value="5" />
+          <a href="#" class="pageArr2"><img src="/Images/admin/page_last.png" alt="맨마지막" class="Arr1"></a>
+          <input type="text" class="inp_txt7" value="90" /></td>
+        <th>수주2</th>
+        <td><input type="text" class="inp_txt6" value="-5" />
+          <a href="#" class="pageArr2"><img src="/Images/admin/page_last.png" alt="맨마지막" class="Arr1"></a>
+          <input type="text" class="inp_txt7" value="-90" /></td>
+        <th>마진단가</th>
+        <td><input type="text" class="inp_txt" value="120" /></td>
+      </tr>
+    </table>
+  </div>
+  <h4>발주내역</h4>
+  <div class="tWrap">
+    <table class="tableStyle">
+      <colgroup>
+      <col style="width:10%">
+      <col style="width:15%">
+      <col style="width:10%">
+      <col style="width:15%">
+      <col style="width:10%">
+      <col style="width:15%">
+      <col style="width:10%">
+      <col style="width:15%">
+      </colgroup>
+      <tr>
+        <th>제품수량</th>
+        <td><input type="text" class="inp_txt7" value="10" />
+          <a href="#" class="sbtn_gray2">완료</a></td>
+        <th>매입금액</th>
+        <td><input type="text" class="inp_txt" value="15,000" /></td>
+        <th>환율[$]</th>
+        <td><input type="text" class="inp_txt" value="1" /></td>
+        <th>매출금액</th>
+        <td><input type="text" class="inp_txt" value="18,000" /></td>
+      </tr>
+      <tr>
+        <th>PSR</th>
+        <td><input type="text" class="inp_txt6" value="10" />
+          <a href="#" class="pageArr2"><img src="/Images/admin/page_last.png" alt="맨마지막" class="Arr1"></a>
+          <input type="text" class="inp_txt7" value="1,800" /></td>
+        <th>수주</th>
+        <td><input type="text" class="inp_txt6" value="5" />
+          <a href="#" class="pageArr2"><img src="/Images/admin/page_last.png" alt="맨마지막" class="Arr1"></a>
+          <input type="text" class="inp_txt7" value="900" /></td>
+        <th>수주2</th>
+        <td><input type="text" class="inp_txt6" value="-5" />
+          <a href="#" class="pageArr2"><img src="/Images/admin/page_last.png" alt="맨마지막" class="Arr1"></a>
+          <input type="text" class="inp_txt7" value="-900" /></td>
+        <th>매출마진</th>
+        <td><input type="text" class="inp_txt" value="1,200" /></td>
+      </tr>
+    </table>
+  </div>
+  <div class="btns clfix">
+    <div class="btns_l"> <a href="#" class="rbtn_line">닫기</a> </div>
+    <a href="#" class="rbtn_bg">적용</a> <a href="#" class="rbtn_bg">적용계속</a>
+    <div class="btns_r"><a href="/Blueport/popup_layer_product_add.html" class="rbtn_bg_red">제품 추가</a> </div>
+  </div>
+</div>
+<!--//A_center-->
+</body>
+</html>

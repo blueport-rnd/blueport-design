@@ -1,0 +1,214 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>블루포트 발주시스템</title>
+<link type="text/css" rel="stylesheet" href="/Css/A_common.css" />
+<script type="text/javascript" src="/Scripts/jquery-1.6.2.min.js"></script>
+<script type="text/javascript" src="/Scripts/include.js"></script>
+</head>
+
+<body>
+<div id="A_head"></div>
+<div class="A_center">
+  <h3>신규 파트너 등록</h3>
+	<h4>파트너 대표 아이디</h4>
+    <div class="tWrap">
+   	  <table class="tableStyle">
+        	<colgroup>
+        		<col style="width:8%">
+       		<col style="">
+        		<col style="width:8%">
+       		<col style="width:22%">
+        		<col style="width:8%">
+       		<col style="width:22%">
+        	</colgroup>
+            <tr>
+       		  <th>대표아이디</th>
+                <td><input type="text" class="inp_txt" /> 
+                <a href="#" class="sbtn_gray2">중복체크</a></td>
+       		  <th>비밀번호</th>
+                <td><input type="text" class="inp_txt" /></td>
+       		  <th>비밀번호 확인</th>
+                <td><input type="text" class="inp_txt" /></td>
+        	</tr>
+        </table>
+    </div>
+	<h4>파트너 업체 정보</h4>
+    <div class="tWrap">
+    	<table class="tableStyle">
+        	<colgroup>
+        		<col style="width:8%">
+       		<col style="">
+        		<col style="width:8%">
+       		<col style="width:22%">
+        		<col style="width:8%">
+       		<col style="width:22%">
+        	</colgroup>
+            <tr>
+       		  <th class="compulsory">파트너명</th>
+                <td><input type="text" class="inp_txt" /></td>
+       		  <th class="compulsory">사업자등록번호</th>
+                <td><input type="text" class="inp_txt" /> 
+                <a href="#" class="sbtn_gray2">중복체크</a></td>
+       		  <th class="compulsory">대표자명</th>
+                <td><input type="text" class="inp_txt" /></td>
+        	</tr>
+            <tr>
+       		  <th class="compulsory">업태/업종</th>
+                <td><input type="text" class="inp_txt2" />
+                /
+                <input type="text" class="inp_txt2" /></td>
+              <th class="compulsory">사업자등록증 사본</th>
+              <td colspan="3"><input type="file" /> <img src="/Images/admin/ico_file.png" alt="첨부파일"><a href="#">test.xls</a><a href="#" class="btn_ico"><img src="/Images/admin/ico_delete.png" alt="삭제"></a> <img src="/Images/admin/ico_file.png" alt="첨부파일"><a href="#">test.xls</a><a href="#" class="btn_ico"><img src="/Images/admin/ico_delete.png" alt="삭제"></a></td>
+            </tr>
+            <tr>
+       		  <th class="compulsory">대표번호</th>
+                <td><input type="text" class="inp_txt" /></td>
+       		  <th>팩스번호</th>
+                <td><input type="text" class="inp_txt" /></td>
+       		  <th>대표자 이메일</th>
+                <td><input type="text" class="inp_txt" /></td>
+        	</tr>
+            <tr>
+       		  <th class="compulsory">지역</th>
+                <td><select name="select" class="select_style">
+                  <option selected>서울</option>
+                  <option>인천</option>
+                  <option>부산</option>
+                  <option>대전</option>
+                  <option>광주</option>
+                  <option>대구</option>
+                  <option>울산</option>
+                  <option>경기도</option>
+                  <option>강원도</option>
+                  <option>충청북도</option>
+                  <option>충청남도</option>
+                  <option>전라북도</option>
+                  <option>전라남도</option>
+                  <option>경상북도</option>
+                  <option>경상남도</option>
+                  <option>제주</option>
+                  <option>세종</option>
+                </select></td>
+       		  <th class="compulsory">주소</th>
+                <td colspan="3"><input type="text" class="inp_txt2" /> <a href="#" class="btn_gray">우편번호</a> <input type="text" class="inp_txt" /></td>
+   		    </tr>
+        </table>
+    </div>
+  <h4>입금 계좌 정보</h4>
+    <div class="tWrap">
+    	<table class="tableStyle">
+        	<colgroup>
+        		<col style="width:8%">
+       		<col style="">
+        		<col style="width:8%">
+       		<col style="width:22%">
+        		<col style="width:8%">
+       		<col style="width:22%">
+        	</colgroup>
+            <tr>
+       		  <th>등록은행</th>
+                <td><input type="text" class="inp_txt" /></td>
+       		  <th>계좌번호</th>
+                <td><input type="text" class="inp_txt" /></td>
+       		  <th>예금주</th>
+                <td><input type="text" class="inp_txt" /></td>
+        	</tr>
+            <tr>
+              <th>통장사본</th>
+              <td colspan="5"><input type="file" /> <img src="/Images/admin/ico_file.png" alt="첨부파일"><a href="#">test.xls</a><a href="#" class="btn_ico"><img src="/Images/admin/ico_delete.png" alt="삭제"></a> <img src="/Images/admin/ico_file.png" alt="첨부파일"><a href="#">test.xls</a><a href="#" class="btn_ico"><img src="/Images/admin/ico_delete.png" alt="삭제"></a></td>
+            </tr>
+        </table>
+    </div>
+  <h4>대표 담당자 정보</h4>
+    <div class="tWrap">
+    	<table class="tableStyle">
+        	<colgroup>
+        		<col style="width:8%">
+       		<col style="">
+        		<col style="width:8%">
+       		<col style="width:22%">
+        		<col style="width:8%">
+       		<col style="width:22%">
+        	</colgroup>
+            <tr>
+       		  <th>담당업무</th>
+                <td class="compulsory">
+                  <select name="select3" class="select_style">
+                    <option>대표이사</option>
+                    <option>발주담당</option>
+                    <option>영업담당</option>
+                  </select>
+                  </td>
+       		  <th class="compulsory">담당자</th>
+                <td><input type="text" class="inp_txt" /></td>
+       		  <th>부서/직급</th>
+                <td><input type="text" class="inp_txt" /></td>
+        	</tr>
+            <tr>
+       		  <th class="compulsory">전화번호</th>
+                <td><input type="text" class="inp_txt" /></td>
+       		  <th class="compulsory">핸드폰</th>
+                <td><input type="text" class="inp_txt" /></td>
+       		  <th class="compulsory">이메일</th>
+                <td><input type="text" class="inp_txt" /></td>
+        	</tr>
+        </table>
+    </div>
+  <h4>여신금액 책정</h4>
+    <div class="tWrap">
+      <table class="tableStyle">
+        <colgroup>
+          <col style="width:8%">
+          <col style="width:17%">
+          <col style="width:8%">
+          <col style="width:17%">
+          <col style="width:8%">
+          <col style="">
+        </colgroup>
+        <tr>
+          <th>여신방식</th>
+          <td><select name="select2" class="select_style  fl">
+            <option selected>선입금</option>
+            <option>익월말 현금</option>
+            <option>당월말 현금</option>
+            <option>카드</option>
+            <option>기타</option>
+          </select>&nbsp;
+          <input type="text" class="inp_txt5" />
+          <!--기타일 경우에만 input 보이면서, 숫자입력(50 = 50일 여신)--></td>
+          <th>여신금액</th>
+          <td><input type="text" class="inp_txt" />
+          <!-- 숫자입력 : 입력값 기준에서 미수금 초과시, 모든 항목에서 파트너명 red 표시 --></td>
+          <th>여신특이사항</th>
+          <td><input type="text" class="inp_txt" /></td>
+        </tr>
+      </table>
+    </div>
+  <h4>파트너 특이 사항</h4>
+    <div class="tWrap">
+      <table class="tableStyle">
+        <colgroup>
+          <col style="width:8%">
+          <col style="width:92%">
+        </colgroup>
+        <tr>
+          <th class="height_style2">특이사항</th>
+          <td class="height_style2"><textarea name="textarea" class="ta_style">- 줌특이해</textarea></td>
+        </tr>
+      </table>
+    </div>
+  <div class="btns clfix">
+        <div class="btns_l">
+            <a href="#" class="rbtn_line">취소</a>
+        </div>
+        <div class="btns_r">
+            <a href="#" class="rbtn_line">목록</a>
+            <a href="#" class="rbtn_bg_red">등록완료</a>
+        </div>
+  </div>
+</div>
+<!--//A_center-->
+</body>
+</html>
